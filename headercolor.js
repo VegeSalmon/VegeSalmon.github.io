@@ -26,3 +26,34 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 });
+document.addEventListener("DOMContentLoaded", () => {
+    const images = ["zdjecia/glowna.png", "zdjecia/produkt1.png", "zdjecia/produkt2.png"];
+    let currentIndex = 0;
+
+    const mainImage = document.getElementById("main-image");
+    const leftArrow = document.querySelector(".arrow-left");
+    const rightArrow = document.querySelector(".arrow-right");
+
+    // Debugowanie
+    if (!mainImage) {
+        console.error("Nie znaleziono elementu <img> z id 'main-image'.");
+    }
+    if (!leftArrow) {
+        console.error("Nie znaleziono elementu strzałki z klasą 'arrow-left'.");
+    }
+    if (!rightArrow) {
+        console.error("Nie znaleziono elementu strzałki z klasą 'arrow-right'.");
+    }
+
+    if (leftArrow && rightArrow && mainImage) {
+        leftArrow.addEventListener("click", () => {
+            currentIndex = (currentIndex - 1 + images.length) % images.length;
+            mainImage.src = images[currentIndex];
+        });
+
+        rightArrow.addEventListener("click", () => {
+            currentIndex = (currentIndex + 1) % images.length;
+            mainImage.src = images[currentIndex];
+        });
+    }
+});
