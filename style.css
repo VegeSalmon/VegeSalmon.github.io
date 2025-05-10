@@ -382,58 +382,6 @@ a:hover span {
     color: white;
 }
 
-.historia {
-    margin-top: 50px;
-    padding: 0 40px;
-    padding-bottom: 120px;
-}
-
-.historia h2 {
-    font-weight: 300;
-    letter-spacing: 0.25em;
-    margin-bottom: 20px;
-    line-height: 1.2em;
-    text-transform: uppercase;
-    color: black;
-    font-size: 35px;
-    text-align: center;
-}
-
-.historia-content {
-    display: flex;
-    align-items: center;
-    margin-top: 20px;
-    justify-content: space-between;
-}
-
-.historia-text {
-    width: 44%;
-    text-align: left;
-    padding-left: 40px;
-}
-
-.historia-image {
-    width: 56%;
-    max-width: 100%;
-    display: block;
-}
-
-.historia-text h3 {
-    font-size: 35px;
-    font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 0.15em;
-    margin-bottom: 15px;
-    color: black;
-}
-
-.historia-text p {
-    font-size: 14px;
-    text-transform: none;
-    color: black;
-    margin-bottom: 20px;
-    line-height: 1.5;
-}
 
 .zobacz-wiecej-szary {
     display: inline-flex;
@@ -457,20 +405,6 @@ a:hover span {
     background-color: #E31019;
     color: white;
     border-color: #E31019;
-}
-
-.historia .container {
-    position: relative;
-}
-
-.historia-background {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    z-index: -1;
 }
 
 footer {
@@ -814,13 +748,16 @@ ul {
 }
 
 .arrow path {
-    transition: all 0.3s ease;
+    fill: var(--stroke-color);
+    stroke: var(--stroke-color);
+    transition: fill 0.3s ease, stroke 0.3s ease;
 }
 
 .arrow:hover path {
     fill: var(--hover-color);
     stroke: var(--hover-color);
 }
+
 
 .arrow:hover {
     transform: translateX(-5px);
@@ -853,6 +790,72 @@ ul {
     display: inline;
     margin: 0;
     padding: 0;
+}
+.historia {
+    margin-top: 50px;
+    padding: 0 40px;
+    padding-bottom: 120px;
+}
+
+.historia h2 {
+    font-weight: 300;
+    letter-spacing: 0.25em;
+    margin-bottom: 20px;
+    line-height: 1.2em;
+    text-transform: uppercase;
+    color: black;
+    font-size: 35px;
+    text-align: center;
+}
+
+.historia-content {
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+    justify-content: space-between;
+}
+
+.historia-text {
+    width: 44%;
+    text-align: left;
+    padding-left: 40px;
+}
+
+.historia-image {
+    width: 56%;
+    max-width: 100%;
+    display: block;
+}
+
+.historia-text h3 {
+    font-size: 35px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    margin-bottom: 15px;
+    color: black;
+}
+
+.historia-text p {
+    font-size: 14px;
+    text-transform: none;
+    color: black;
+    margin-bottom: 20px;
+    line-height: 1.5;
+}
+
+.historia .container {
+    position: relative;
+}
+
+.historia-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
 }
 
 .historia-text {
@@ -922,4 +925,215 @@ ul {
 .historia-item:hover::after,
 .historia-item:hover::before {
     opacity: 1;
+}
+.aktualnosci-image {
+    width: 100%;
+    max-width: 100%;
+    display: block;
+}
+
+.aktualnosci {
+    margin-top: 50px;
+}
+
+.aktualnosci h2 {
+    font-weight: 300;
+    letter-spacing: 0.25em;
+    margin-bottom: 20px;
+    line-height: 1.2em;
+    text-transform: uppercase;
+    color: black;
+    font-size: 35px;
+    text-align: center;
+}
+
+.aktualnosci-content {
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+    justify-content: space-between;
+}
+
+.aktualnosci-text {
+    width: 44%;
+    text-align: left;
+}
+
+.aktualnosci-image {
+    width: 100%;
+    max-width: 100%;
+    display: block;
+}
+
+.aktualnosci-text h3 {
+    font-size: 22px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    margin-bottom: 15px;
+    color: black;
+}
+
+.aktualnosci-text p {
+    font-size: 15px;
+    text-transform: none;
+    color: black;
+    line-height: 1.5;
+}
+
+.aktualnosci .container {
+    position: relative;
+}
+
+.aktualnosci-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+.aktualnosci-text {
+    max-width: 536px;
+}
+
+.aktualnosci-text p {
+    text-align: justify;
+    line-height: 2;
+    font-size: 15px;
+}
+
+.aktualnosci-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    width: 100%;
+    aspect-ratio: 2 / 1;
+    gap: 16px;
+}
+
+.aktualnosci-item {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.aktualnosci-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: filter 0.3s ease;
+}
+
+.aktualnosci-item:hover img {
+    filter: brightness(55%);
+}
+
+.aktualnosci-item::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.55);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: 1;
+}
+
+/* Dodanie daty na obrazkach */
+.img-wrapper {
+    position: relative;
+    width: 48%;  /* Ważne: sprawia, że wrapper zajmuje całą dostępna szerokość */
+    height: auto; /* Zapewnia, że wrapper dostosowuje wysokość do zdjęcia */
+}
+
+.aktualnosci-date {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background-color: black;
+    color: white;
+    padding: 6px 10px;
+    font-size: 13px;
+    font-weight: 500;
+    border-radius: 10px; /* Zaokrąglone rogi */
+    z-index: 2;
+    opacity: 0.85;
+    width: 122px;  /* Ustawiona szerokość prostokąta */
+    height: 36px;  /* Ustawiona wysokość prostokąta */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container-aktualnosci {
+    margin: 0 auto;
+    max-width: 1480px;
+    width: 100%;
+}
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+    margin: 60px auto 40px;
+    flex-wrap: wrap;
+}
+
+.pagination .page,
+.pagination .dots {
+    font-size: 16px;
+    text-decoration: none;
+    color: black;
+    padding: 6px 10px;
+    border-radius: 6px;
+    min-width: 32px;
+    text-align: center;
+    font-weight: 300;
+}
+
+.pagination .page.current {
+    color: #E31019;
+    font-weight: 700;
+}
+
+.pagination .arrow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 32px; /* wysokość zbliżona do numerków */
+    width: 32px;
+}
+.pagination .arrow path {
+    fill: black;
+    stroke: black;
+    transition: fill 0.3s ease, stroke 0.3s ease;
+}
+.pagination .arrow:hover path {
+    fill: #E31019;
+    stroke: #E31019;
+    transition: fill 0.3s ease, stroke 0.3s ease;
+}
+.pagination .arrow img {
+    width: 20px;
+    height: 20px;
+    display: block;
+}
+
+.pagination .dots {
+    pointer-events: none;
+    opacity: 0.6;
+}
+.pagination .page:hover {
+    color: #E31019; /* ciemniejszy czerwony lub dowolny inny kolor */
+    cursor: pointer;
+}
+.full-width-text {
+    width: 100%;
+    font-size: 15px;
+    font-weight: 300;
+    line-height: 1.6;
+    padding: 50px 0;
 }
