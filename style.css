@@ -399,12 +399,14 @@ a:hover span {
     margin-top: 40px;
     height: 46px;
     max-width: 156px;
+    font-family: 'Poppins', sans-serif;
 }
 
-.zobacz-wiecej-szary:hover {
+.zobacz-wiecej-szary:hover, .product-card:hover .zobacz-wiecej-szary {
     background-color: #E31019;
     color: white;
     border-color: #E31019;
+    cursor: pointer;
 }
 
 footer {
@@ -545,7 +547,6 @@ a:hover {
     position: relative;
     cursor: pointer;
     z-index: 3;
-    margin-right: 27px;
 }
 
 .hamburger span {
@@ -791,6 +792,7 @@ ul {
     margin: 0;
     padding: 0;
 }
+
 .historia {
     margin-top: 50px;
     padding: 0 40px;
@@ -927,6 +929,7 @@ ul {
 .historia-item:hover::before {
     opacity: 1;
 }
+
 .aktualnosci-image {
     width: 100%;
     max-width: 100%;
@@ -1047,7 +1050,7 @@ ul {
 /* Dodanie daty na obrazkach */
 .img-wrapper {
     position: relative;
-    width: 48%;  /* Ważne: sprawia, że wrapper zajmuje całą dostępna szerokość */
+    width: 48%; /* Ważne: sprawia, że wrapper zajmuje całą dostępna szerokość */
     height: auto; /* Zapewnia, że wrapper dostosowuje wysokość do zdjęcia */
 }
 
@@ -1063,8 +1066,8 @@ ul {
     border-radius: 10px; /* Zaokrąglone rogi */
     z-index: 2;
     opacity: 0.85;
-    width: 122px;  /* Ustawiona szerokość prostokąta */
-    height: 36px;  /* Ustawiona wysokość prostokąta */
+    width: 122px; /* Ustawiona szerokość prostokąta */
+    height: 36px; /* Ustawiona wysokość prostokąta */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -1075,6 +1078,7 @@ ul {
     max-width: 1480px;
     width: 100%;
 }
+
 .pagination {
     display: flex;
     justify-content: center;
@@ -1108,16 +1112,19 @@ ul {
     height: 32px; /* wysokość zbliżona do numerków */
     width: 32px;
 }
+
 .pagination .arrow path {
     fill: black;
     stroke: black;
     transition: fill 0.4s ease, stroke 0.4s ease;
 }
+
 .pagination .arrow:hover path {
     fill: #E31019;
     stroke: #E31019;
     transition: fill 0.4s ease, stroke 0.4s ease;
 }
+
 .pagination .arrow img {
     width: 20px;
     height: 20px;
@@ -1128,10 +1135,12 @@ ul {
     pointer-events: none;
     opacity: 0.6;
 }
+
 .pagination .page:hover {
     color: #E31019; /* ciemniejszy czerwony lub dowolny inny kolor */
     cursor: pointer;
 }
+
 .full-width-text {
     width: 100%;
     font-size: 15px;
@@ -1139,8 +1148,410 @@ ul {
     line-height: 1.6;
     padding: 50px 0;
 }
-.center{
+
+.center {
     display: flex;
     justify-content: center;
     align-items: center;
 }
+
+.produkty-main {
+    display: flex;
+    gap: 20px;
+}
+
+.produkty-aside {
+    max-width: 336px;
+    width: 100%;
+    text-transform: uppercase;
+    flex: 0 0 336px;
+}
+
+.produkty-aside h3 {
+    font-size: 24px;
+    text-transform: uppercase;
+    margin: 30px 0;
+    color: black;
+    font-weight: 300;
+
+}
+
+.kategorie-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.kategorie-list li {
+    border-top: 1px solid #e0e0e0;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.kategorie-list li a,
+.kategorie-list li label {
+    display: flex;
+    align-items: center;
+    font-size: 17px;
+    font-weight: 300;
+    padding: 14px 20px;
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
+}
+
+.kategorie-list li label input {
+    margin-right: 0.5em;
+}
+
+.price-filter {
+    display: flex;
+    gap: 10px;
+    margin: 20px 0;
+}
+
+.price-filter input {
+    width: 100px;
+    height: 50px;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-radius: 0;
+    background-color: transparent;
+}
+
+.filter-button {
+    display: block;
+    width: 70%;
+    margin: 0 auto;
+    padding: 10px 20px;
+    background-color: black;
+    color: white;
+    text-align: center;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 500;
+    text-transform: uppercase;
+    transition: all 0.4s;
+}
+
+.filter-button:hover {
+    background-color: #E31019;
+}
+
+.produkty-content {
+    flex: 1;
+    padding-left: 75px;
+    align-items: flex-start;
+}
+
+.kategorie-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.kategorie-list li {
+    border-top: 1px solid rgba(0, 0, 0, 0.2); /* Border tylko u góry */
+    border-bottom: none; /* Usunięcie dolnego borderu */
+}
+
+.kategorie-list li:last-child {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2); /* Border na dole dla ostatniego elementu */
+}
+
+.kategorie-list li a {
+    display: block;
+    font-size: 17px;
+    font-weight: 300;
+    padding: 14px 20px; /* Added padding as requested */
+    text-decoration: none;
+    color: black; /* Ensures links are black */
+}
+
+.produkty-aside {
+    max-width: 336px;
+    width: 100%;
+    text-transform: uppercase; /* Ensures all text in the left column is uppercase */
+}
+
+.kategorie-list li a,
+.kategorie-list li label {
+    display: flex;
+    align-items: center;
+    font-size: 17px;
+    font-weight: 300;
+    padding: 14px 20px; /* Padding for better spacing */
+    text-decoration: none;
+    color: black; /* Ensures links are black */
+    border: 1px solid transparent; /* Adds a border for hover effect */
+    transition: all 0.3s ease; /* Smooth transition for hover effects */
+}
+
+.kategorie-list li a:hover,
+.kategorie-list li label:hover {
+    color: #e31019; /* Text color on hover */
+}
+
+.kategorie-list li label {
+    display: flex;
+    align-items: center;
+    font-size: 14px; /* Updated font size */
+    font-weight: 400; /* Updated font weight */
+    padding: 14px 20px;
+    text-decoration: none;
+    color: black;
+    cursor: pointer;
+    border: 1px solid transparent;
+    transition: all 0.3s ease;
+}
+
+.kategorie-list li label input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+    margin-right: 18px;
+    background-color: transparent; /* Set background to transparent */
+    border: 2px solid rgba(0, 0, 0, 0.2); /* Border for the checkbox */
+    border-radius: 0; /* Remove border radius */
+    appearance: none; /* Remove default styling */
+    cursor: pointer;
+    position: relative;
+    display: inline-block;
+}
+
+.kategorie-list li label input[type="checkbox"]::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 10px; /* Match the width of the SVG */
+    height: 8px; /* Match the height of the SVG */
+    background: url('zdjecia/check.svg') no-repeat center center;
+    background-size: contain;
+    transform: translate(-50%, -50%);
+    opacity: 0; /* Initially hidden */
+    transition: opacity 0.2s ease;
+}
+
+.kategorie-list li label input[type="checkbox"]:checked::after {
+    opacity: 1; /* Show the checkmark when checked */
+}
+.produkty-main {
+    display: flex;
+    align-items: flex-end;
+    gap: 75px;
+}
+
+.produkty-content {
+    flex: 1;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    padding-left: 75px;
+}
+
+.product-card {
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    border-radius: 0;
+    height: 410px;
+    width: auto;
+    text-align: center;
+    background-color: #fff;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-transform: uppercase;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow: hidden;
+    padding: 46px 16px 32px 16px;
+    box-sizing: border-box;
+}
+
+.product-card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+}
+.product-card:hover .zobacz-wiecej-szary{
+
+}
+
+.product-card img {
+    max-width: 100%;
+    height: 100px;
+    object-fit: cover;
+    margin-bottom: 12px;
+    background-color: #f0f0f0;
+}
+
+.product-card h4 {
+    font-size: 15px;
+    font-weight: 300;
+    margin: 24px 0 12px;
+    color: black;
+}
+
+.product-card .price-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+    margin: 12px 0;
+}
+
+.product-card .old-price {
+    font-size: 12px;
+    font-weight: 300;
+    text-decoration: line-through;
+    color: #999;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.product-card .info-icon {
+    width: 16px;
+    height: 16px;
+    background: url('zdjecia/info-icon.svg') no-repeat center center;
+    background-size: contain;
+}
+
+.product-card .promo-price {
+    font-size: 16px;
+    font-weight: 400;
+    color: black;
+}
+
+.product-card .zobacz-wiecej-szary {
+    margin: 0 auto;
+}
+
+
+
+
+.produkty-content h1.centered-title {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+
+
+
+.produkty-main {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+}
+
+.produkty-content {
+    flex: 1;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    padding: 12px;
+    padding-left: 75px;
+}
+
+.tytul {
+    grid-column: span 4;
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 35px;
+    font-weight: 300;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    color: black;
+}
+
+
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type="number"] {
+    -moz-appearance: textfield;
+}
+.price-filter input {
+    width: 100px;
+    height: 50px;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-radius: 0;
+    background-color: transparent;
+    text-align: center;
+}
+.price-filter p {
+    text-transform: none;
+    display: flex;
+    align-items: center;
+    margin: 0;
+}
+.produkty-aside hr{
+    background-color: rgba(0, 0, 0, 0.2) !important;
+
+}
+.sort-select-label {
+    font-size: 14px;
+    color: black;
+    text-transform: none;
+    letter-spacing: normal;
+}
+.kategorie-list li a,
+.kategorie-list li label,
+.footer-column ul li {
+    letter-spacing: 0.2em;
+}
+.filter-button,
+.price-filter input {
+    font-family: 'Poppins', sans-serif;
+}
+/* Keep the select background consistent */
+.sort-select {
+    background-color: #eaeaea; /* Default background color */
+    color: black; /* Default text color */
+    border: 1px solid #eaeaea;
+    border-radius: 10px;
+    padding: 10px 20px;
+    font-size: 14px;
+    font-weight: 400;
+    cursor: pointer;
+    transition: all 0.4s ease;
+}
+
+/* Change the background color of options on hover */
+
+.center-produkty{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.chinskie-znaczki{
+    font-size: 13px;
+}
+.tytul img{
+    width: 100%;
+}
+.full-width-image {
+    width: 100%;
+    height: auto;
+    margin: 20px 0;
+}
+
+.sort-description {
+    font-size: 14px;
+    margin-top: 10px;
+    width: 60%;
+    text-align: left;
+    letter-spacing: normal;
+    text-transform: none;
+    font-weight: 300;
+}
+.sort-container {
+    display: flex;
+    align-items: center; /* Aligns items vertically */
+    justify-content: space-between;
+}
+
