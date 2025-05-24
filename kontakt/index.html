@@ -73,63 +73,93 @@
             <nav class="breadcrumb">
                 <a href="../">Strona główna</a>
                 <span class="separator">&gt;</span>
-                <a href="#" class="current">Regulamin</a>
+                <a href="#" class="current">Kontakt</a>
             </nav>
-            <h1 class="centered-title">Regulamin</h1>
+            <h1 class="centered-title">Kontakt</h1>
+            <p class="kontakt-text">Firma OMC jest dystrybutorem produktów marki MASAHIRO w Polsce.<br>
+                Zapraszamy do współpracy odbiorców hurtowych, sklepy z nożami, kucharzy, restauratorów, hotelarzy, blogerów, dekoratorów wnętrz i projektantów.</p>
+            
         </div>
+        <div class="kontakt-start">
+            <div class="kontakt-image">
+                <img src="../zdjecia/czarnynapis.svg" alt="napishiragana">  
+            </div>
+            <div class="kontakt-wrapper">
+                <div class="kontakt-icon">
+                    <img src="../zdjecia/pin.svg" alt="pin">
+                </div>
+                <p> <b>Sekiryu International</b> <br>
+                    1 rue Rohan 67790 STEINBOURG, France</p>
+            </div>
+            <div class="kontakt-wrapper">
+                <div class="kontakt-icon">
+                    <img src="../zdjecia/koperta.svg" alt="pin">
+                </div>
+                <p> <b>Napisz do nas</b> <br>
+                    meilleur@couteau.info</p>
+            </div>
+        </div>
+        <h3 class="centered-title small">Formularz kontaktowy</h3>
+        <div class="kontakt-wrapper-form">
+            <form action="#" class="kontakt">
+                <div class="kontakt-row">
+                    <div class="kontakt-input">
+                        <label for="name"><span class="label-bold">Imie i nazwisko</span> <span class="star">*</span></label><br>
+                        <input type="text" name="name" id="name" placeholder="Jan Kowalski" required>
+                    </div>
+                    <div class="kontakt-input">
+                        <label for="email"><span class="label-bold">E-mail</span> <span class="star">*</span></label><br>
+                        <input type="email" name="email" id="email" placeholder="jankowalski@emial.pl" required>
+                    </div>
+                    <div class="kontakt-input">
+                        <label for="Telefon"><span class="label-bold">Telefon</span></label><br>
+                        <input type="number" name="Telefon" id="Telefon" placeholder="+48 500 500 500">
+                    </div>
+                </div>
+
+                <div class="kontakt-input">
+                    <label for="Wiadomosc"><span class="label-bold">Wiadomość</span> <span class="star">*</span></label><br>
+                    <textarea name="Wiadomosc" id="Wiadomosc" cols="30" rows="10" required></textarea>
+                </div>
+
+                <!-- CAPTCHA ROW -->
+                <div class="kontakt-row captcha-row">
+                    <div class="captcha-col">
+                        <canvas id="captcha-canvas" width="160" height="46"></canvas>
+                        <button type="button" id="refresh-captcha" class="captcha-refresh-square" aria-label="Zmień kod">
+                            <img src="../zdjecia/refresh.svg" alt="Odśwież captcha" />
+                        </button>
+                    </div>
+                    <div class="captcha-input-col">
+                        <input type="text" id="captcha-input" name="captcha" placeholder="Przepisz kod" required autocomplete="off" class="captcha-code">
+                    </div>
+                </div>
+
+                <!-- CHECKBOX + LABEL ROW -->
+                <div class="kontakt-row kontakt-row-checkbox">
+                    <div class="kontakt-checkbox-wrap">
+                        <input type="checkbox" id="zgoda" name="zgoda" required>
+                    </div>
+                    <label for="zgoda" class="kontakt-checkbox-label">
+                        Aenean accumsan magna id dapibus vehicula. Sed viverra mi posuere auctor porttitor. Nullam lectus mauris, tincidunt semper efficitur eu, ullamcorper ac dui. Duis lobortis vitae felis sed interdum. Donec ut blandit mi. Donec sagittis purus at nulla dapibus, vitae ultricies ligula dapibus. Pellentesque lobortis nisl at nibh imperdiet, vitae porttitor turpis malesuada. Pellentesque commodo justo a justo ultricies maximus.
+                    </label>
+                </div>
+
+                <!-- SUBMIT BUTTON -->
+                <div class="kontakt-submit-wrap">
+                    <button type="submit" class="kontakt-submit">Wyślij</button>
+                </div>
+            </form>
+            <!-- Dodane zdjęcie absolutnie po prawej -->
+            <div class="kontakt-image-absolute">
+                <img src="../zdjecia/kontakt-image.png" alt="kontakt dekoracja">
+            </div>
+        </div>
+        
+
     </div>
 
-    <div class="container-regulamin">
-
-        <section>
-            <h2>I. Definicje</h2>
-            <p>Użyte w Regulaminie pojęcia oznaczają:</p>
-            <br>
-            <ol>
-                <li>Klient – osoba fizyczna, osoba prawna lub jednostka organizacyjna niebędąca osobą prawną, której przepisy szczególne przyznają zdolność prawną, która dokonuje Zamówienia w ramach Sklepu;</li>
-                <li>Konsument – zgodnie z art. 22[1] Kodeksu Cywilnego oznacza osobę fizyczną dokonującą z przedsiębiorcą czynności prawnej niezwiązanej bezpośrednio z jej działalnością gospodarczą lub zawodową.</li>
-                <li>Kodeks Cywilny – ustawa z dnia 23 kwietnia 1964 r. (Dz.U. Nr 16, poz. 93 ze zm.);</li>
-                <li>Regulamin – niniejszy Regulamin świadczenia usług drogą elektroniczną w ramach sklepu internetowego;</li>
-                <li>Sklep internetowy (Sklep) – serwis internetowy dostępny pod Niemchem.com, za pośrednictwem którego Klient może w szczególności składać Zamówienia;</li>
-                <li>Towar – produkty prezentowane w Sklepie Internetowym;</li>
-                <li>Umowa sprzedaży – umowa sprzedaży Towarów w rozumieniu Kodeksu Cywilnego, zawarta pomiędzy;</li>
-                <li>Ustawa o prawach konsumenta – ustawa z dnia 30 maja 2014 r. o prawach konsumenta (Dz.U. z 2014 r. poz. 827);</li>
-                <li>Ustawa o świadczeniu usług drogą elektroniczną – ustawa z dnia 18 lipca 2002 r. o świadczeniu usług drogą elektroniczną (Dz. U. Nr 144, poz. 1204 ze zm.);</li>
-                <li>RODO – Rozporządzenie Parlamentu Europejskiego i Rady (UE) 2016/679 z dnia 27 kwietnia 2016 r. w sprawie ochrony osób fizycznych w związku z przetwarzaniem danych osobowych i w sprawie swobodnego przepływu takich danych oraz uchylenia dyrektywy 95/46/WE (ogólne rozporządzenie o ochronie danych).</li>
-                <li>Zamówienie – oświadczenie woli Klienta, zmierzające bezpośrednio do zawarcia Umowy sprzedaży, określające w szczególności rodzaj i liczbę Towaru.</li>
-            </ol>
-        </section>
-
-
-
-        <section>
-            <h2><b>II. Postanowienia ogólne</b></h2>
-            <ol>
-                <li>Niniejszy Regulamin określa zasady korzystania ze sklepu internetowego dostępnego pod adresem: [adres strony internetowej].</li>
-                <li>Niniejszy Regulamin jest regulaminem, o którym mowa w art. 8 Ustawy o świadczeniu usług drogą elektroniczną.</li>
-                <li>Sklep internetowy, działający pod adresem: prowadzony jest przez</li>
-                <li>Niniejszy Regulamin określa w szczególności:
-                    <ol type="a" class="letter-list">
-                        <li>zasady dokonywania rejestracji i korzystania z konta w ramach sklepu internetowego;</li>
-                        <li>warunki i zasady składania drogą elektroniczną Zamówień w ramach sklepu internetowego;</li>
-                        <li>zasady zawierania Umów sprzedaży z wykorzystaniem usług świadczonych w ramach sklepu Internetowego.</li>
-                    </ol>
-                </li>
-                <li>Korzystanie ze sklepu internetowego jest możliwe pod warunkiem spełnienia przez system teleinformatyczny, z którego korzysta Klient następujących minimalnych wymagań technicznych:
-                    <ol type="a" class="letter-list">
-                        <li>Internet Explorer w wersji 9.0 lub nowszej lub</li>
-                        <li>dowolnej innej przeglądarki kompatybilnej z w.w.</li>
-                    </ol>
-                </li>
-                <li>W celu korzystania ze sklepu internetowego Klient powinien we własnym zakresie uzyskać dostęp do stanowiska komputerowego lub urządzenia końcowego z dostępem do Internetu.</li>
-                <li>Zgodnie z obowiązującymi przepisami prawa chemicon.pl zastrzega sobie możliwość ograniczenia świadczenia usług za pośrednictwem Sklepu internetowego do osób, które ukończyły wiek 18 lat. W takim przypadku potencjalni Klienci zostaną o powyższym powiadomieni.</li>
-                <li>Klienci mogą uzyskać dostęp do niniejszego Regulaminu w każdym czasie za pośrednictwem odsyłacza zamieszczonego na stronie głównej serwisu oraz pobrać go i sporządzić jego wydruk.</li>
-            </ol>
-        </section>
-    </div>
-</main>
-
-
+    </main>
 <footer>
     <div class="container">
         <div class="footer-grid">
@@ -177,6 +207,65 @@
     </div>
 </footer>
 <script src="../menu.js"></script>
+<script>
+    // CAPTCHA GENERATOR
+    function randomCaptchaText(length = 6) {
+        const chars = 'ABCDEFGHJKLMNPQRSTUVWXYZabcdefghjkmnpqrstuvwxyz23456789';
+        let text = '';
+        for (let i = 0; i < length; i++) {
+            text += chars.charAt(Math.floor(Math.random() * chars.length));
+        }
+        return text;
+    }
 
+    function drawCaptcha(text) {
+        const canvas = document.getElementById('captcha-canvas');
+        const ctx = canvas.getContext('2d');
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+        // Tło
+        ctx.fillStyle = '#f5f5f5';
+        ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+        // Szum
+        for (let i = 0; i < 20; i++) {
+            ctx.strokeStyle = `rgba(0,0,0,${Math.random() * 0.2})`;
+            ctx.beginPath();
+            ctx.moveTo(Math.random() * canvas.width, Math.random() * canvas.height);
+            ctx.lineTo(Math.random() * canvas.width, Math.random() * canvas.height);
+            ctx.stroke();
+        }
+
+        // Tekst
+        for (let i = 0; i < text.length; i++) {
+            ctx.save();
+            ctx.font = `${28 + Math.random() * 8}px Arial`;
+            ctx.fillStyle = `rgb(${80 + Math.random()*100},${80 + Math.random()*100},${80 + Math.random()*100})`;
+            ctx.translate(20 + i * 22, 30 + Math.random() * 8);
+            ctx.rotate((Math.random() - 0.5) * 0.4);
+            ctx.fillText(text[i], 0, 0);
+            ctx.restore();
+        }
+    }
+
+    let captchaText = randomCaptchaText();
+    drawCaptcha(captchaText);
+
+    document.getElementById('refresh-captcha').onclick = function() {
+        captchaText = randomCaptchaText();
+        drawCaptcha(captchaText);
+    };
+
+    // Walidacja CAPTCHA przy submit
+    document.querySelector('.kontakt').addEventListener('submit', function(e) {
+        const input = document.getElementById('captcha-input').value.trim();
+        if (input !== captchaText) {
+            alert('Nieprawidłowy kod z obrazka.');
+            e.preventDefault();
+            captchaText = randomCaptchaText();
+            drawCaptcha(captchaText);
+        }
+    });
+</script>
 </body>
 </html>

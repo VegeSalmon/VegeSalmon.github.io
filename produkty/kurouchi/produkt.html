@@ -1,0 +1,610 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../style.css">
+    <title>Kurouchi</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Just+Another+Hand&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+          rel="stylesheet">
+</head>
+<body>
+<header>
+    <div class="container">
+        <div class="srodek">
+            <div class="logo">
+                <a href="../../"><img src="../../zdjecia/logo.png" alt="logo"></a>
+            </div>
+            <div class="prawo">
+                <form action="/">
+                    <input type="search" class="searchinput" placeholder="Wpisz szukaną frazę">
+                    <button type="submit" class="ikony">
+                        <svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                  d="M17.4272 18.4705L13.3824 14.4247L13.1734 14.5871C11.5699 15.8322 9.5523 16.4193 7.5313 16.2288C5.5103 16.0384 3.63781 15.0847 2.29504 13.5619C0.952268 12.0391 0.240166 10.0617 0.30372 8.03215C0.367274 6.00264 1.20171 4.07366 2.63712 2.6379C4.07254 1.20214 6.00102 0.367533 8.02998 0.303965C10.0589 0.240398 12.0359 0.952647 13.5583 2.29573C15.0807 3.63882 16.0342 5.51179 16.2246 7.53334C16.415 9.55489 15.8281 11.573 14.5832 13.1769L14.421 13.3859L18.4581 17.4242L18.4658 17.4314C18.5381 17.4987 18.596 17.5799 18.6362 17.6701C18.6763 17.7603 18.698 17.8577 18.6997 17.9564C18.7014 18.0551 18.6833 18.1532 18.6463 18.2448C18.6093 18.3363 18.5543 18.4195 18.4845 18.4893C18.4147 18.5591 18.3316 18.6142 18.2401 18.6511C18.1485 18.6881 18.0505 18.7063 17.9518 18.7045C17.8532 18.7028 17.7558 18.6812 17.6657 18.641C17.5755 18.6008 17.4945 18.5427 17.4272 18.4705ZM14.2935 10.773C14.6206 9.98304 14.789 9.13632 14.789 8.28123C14.789 6.55429 14.1031 4.89808 12.8823 3.67693C11.6614 2.45578 10.0056 1.76973 8.27899 1.76973C6.55241 1.76973 4.89655 2.45578 3.6757 3.67693C2.45484 4.89808 1.76899 6.55429 1.76899 8.28123C1.76899 9.13632 1.93737 9.98304 2.26452 10.773C2.59168 11.563 3.07119 12.2809 3.6757 12.8855C4.2802 13.4902 4.99786 13.9698 5.7877 14.2971C6.57753 14.6243 7.42407 14.7927 8.27899 14.7927C9.1339 14.7927 9.98045 14.6243 10.7703 14.2971C11.5601 13.9698 12.2778 13.4902 12.8823 12.8855C13.4868 12.2809 13.9663 11.563 14.2935 10.773Z"
+                                  fill="var(--stroke-color)"></path>
+                        </svg>
+                    </button>
+                </form>
+
+
+                <button type="submit" class="ikony">
+                    <svg width="20" height="19" viewBox="0 0 20 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M19.8866 17.8482C18.4236 15.3488 16.169 13.5567 13.5379 12.7071C14.8394 11.9415 15.8506 10.7749 16.4161 9.38651C16.9817 7.99809 17.0704 6.46459 16.6686 5.02152C16.2668 3.57845 15.3968 2.30561 14.1921 1.39845C12.9874 0.491301 11.5146 0 10 0C8.48537 0 7.01262 0.491301 5.80792 1.39845C4.60321 2.30561 3.73316 3.57845 3.33138 5.02152C2.9296 6.46459 3.0183 7.99809 3.58387 9.38651C4.14944 10.7749 5.1606 11.9415 6.46207 12.7071C3.83095 13.5557 1.5764 15.3479 0.113387 17.8482C0.0597359 17.9346 0.0241494 18.0308 0.00872733 18.1311C-0.00669474 18.2313 -0.00164002 18.3336 0.0235932 18.4319C0.0488265 18.5302 0.0937273 18.6225 0.155646 18.7034C0.217565 18.7842 0.295248 18.852 0.384111 18.9028C0.472975 18.9535 0.571219 18.9861 0.673047 18.9987C0.774875 19.0113 0.878224 19.0036 0.976997 18.9761C1.07577 18.9486 1.16797 18.9018 1.24815 18.8385C1.32832 18.7752 1.39486 18.6967 1.44383 18.6076C3.25363 15.5169 6.45246 13.6716 10 13.6716C13.5475 13.6716 16.7464 15.5169 18.5562 18.6076C18.6051 18.6967 18.6717 18.7752 18.7519 18.8385C18.832 18.9018 18.9242 18.9486 19.023 18.9761C19.1218 19.0036 19.2251 19.0113 19.327 18.9987C19.4288 18.9861 19.527 18.9535 19.6159 18.9028C19.7048 18.852 19.7824 18.7842 19.8444 18.7034C19.9063 18.6225 19.9512 18.5302 19.9764 18.4319C20.0016 18.3336 20.0067 18.2313 19.9913 18.1311C19.9758 18.0308 19.9403 17.9346 19.8866 17.8482ZM4.62058 6.83707C4.62058 5.78572 4.93607 4.75798 5.52717 3.88382C6.11827 3.00965 6.95842 2.32832 7.94138 1.92599C8.92434 1.52366 10.006 1.41839 11.0495 1.6235C12.093 1.8286 13.0515 2.33488 13.8038 3.07829C14.5562 3.82171 15.0685 4.76888 15.2761 5.80002C15.4836 6.83117 15.3771 7.89998 14.9699 8.8713C14.5628 9.84262 13.8733 10.6728 12.9886 11.2569C12.104 11.841 11.0639 12.1528 10 12.1528C8.57376 12.1513 7.20637 11.5907 6.19786 10.5942C5.18935 9.59761 4.6221 8.24642 4.62058 6.83707Z"
+                              fill="var(--stroke-color)"></path>
+                    </svg>
+                </button>
+
+                <button type="submit" class="ikony">
+                    <svg class="koszyk" width="28" height="21" viewBox="0 0 28 21" fill="transparent"
+                         xmlns="http://www.w3.org/2000/svg">
+                        <path d="M17.3562 4.91919H25.622C26.0754 5.06566 26.4428 5.43297 26.4428 5.88646V7.52818C26.4428 7.98167 26.0754 8.34911 25.622 8.55406H20.9907"
+                              stroke="var(--stroke-color)" stroke-width="1.4" stroke-miterlimit="10"
+                              stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M5.54324 8.55382H1.82079C1.36744 8.34886 1 7.98142 1 7.52793V5.88621C1 5.43286 1.36744 5.06542 1.82079 4.91895H8.26933"
+                              stroke="var(--stroke-color)" stroke-width="1.4" stroke-miterlimit="10"
+                              stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M24.6257 8.55396L22.8081 17.6407C22.6849 18.441 21.801 19.458 20.9908 19.458H6.45212C5.64205 19.458 4.75804 18.441 4.63468 17.6407L2.81738 8.55396"
+                              stroke="var(--stroke-color)" stroke-width="1.4" stroke-miterlimit="10"
+                              stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M9.17773 12.1887V15.8235" stroke="var(--stroke-color)" stroke-width="1.4"
+                              stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M13.7209 12.1887V15.8235" stroke="var(--stroke-color)" stroke-width="1.4"
+                              stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M18.2646 12.1887V15.8235" stroke="var(--stroke-color)" stroke-width="1.4"
+                              stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M13.7213 6.73646L11 1" stroke="var(--stroke-color)" stroke-width="1.4"
+                              stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </button>
+
+                <button type="submit" class="hamburger" id="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <nav class="menu" id="menu">
+                    <ul>
+                        <li><a href="../">Strona główna</a></li>
+                        <li><a href="../produkty/">Produkty</a></li>
+                        <li><a href="../aktualnosci/">Blog</a></li>
+                        <li><a href="../kontakt/">Kontakt</a></li>
+                        <li><a href="../historia/">Historia</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+
+    </div>
+</header>
+
+<main class="regulamin">
+    <div class="container">
+        <div class="heading">
+            <nav class="breadcrumb">
+                <a href="../../">Strona główna</a>
+                <span class="separator">&gt;</span>
+                <a href="../">Produkty</a>
+                <span class="separator">&gt;</span>
+                <a href="./">Kurouchi</a>
+                <span class="separator">&gt;</span>
+                <a href="#" class="current">Produkt</a>
+            </nav>
+        </div>
+    </div>
+    <div class="product-main-container">
+        <div class="product-main-left">
+            <div class="product-main-image">
+                <img id="mainProductImage" src="../../zdjecia/noz1.png" alt="Nóż główny">
+                <button class="product-image-arrow left" id="arrowLeft" type="button">
+                    <img src="../../zdjecia/arrow-left.svg" alt="Poprzednie zdjęcie">
+                </button>
+                <button class="product-image-arrow right" id="arrowRight" type="button">
+                    <img src="../../zdjecia/arrow-right.svg" alt="Następne zdjęcie">
+                </button>
+            </div>
+            <div class="product-main-thumbs">
+                <div class="product-thumb">
+                    <img src="../../zdjecia/noz1.png" alt="Miniatura 1" data-img="../../zdjecia/noz1.png">
+                </div>
+                <div class="product-thumb">
+                    <img src="../../zdjecia/noz1.png" alt="Miniatura 2" data-img="../../zdjecia/noz1.png">
+                </div>
+            </div>
+        </div>
+        <div class="product-main-right">
+            <h1 class="product-title">Nazwa produktu</h1>
+            <hr>
+            <div class="product-buy">
+                <div class="product-buy-row">
+                    <div class="product-buy-info">
+                        <span class="product-buy-price">299 zł</span>
+                        <span class="product-buy-old">
+                            <span class="old-price">349 zł</span>
+                            <span class="info-icon" title="Informacja o cenie"></span>
+                        </span>
+                        <span class="product-buy-lowest">Najniższa cena z 30 dni przed obniżką: <b>299 zł</b></span>
+                    </div>
+                    <div class="product-buy-qty">
+                        <div class="product-buy-qty-controls">
+                            <button class="qty-btn qty-minus" type="button">-</button>
+                            <input type="number" class="qty-input" value="1" min="1">
+                            <button class="qty-btn qty-plus" type="button">+</button>
+                        </div>
+                        <div class="product-buy-add-wrap">
+                            <button class="product-buy-add">
+                                <img src="../../zdjecia/koszyk.svg" alt=""/>
+                                Dodaj do koszyka
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Sekcje rozwijane -->
+            <div class="product-sections">
+                <div class="product-section">
+                    <div class="product-section-header">
+                        <span>Opis produktu</span>
+                        <span class="product-section-arrow">
+                            <img src="../../zdjecia/arrow-up.svg" alt="Rozwiń/Zwiń" class="arrow-up-svg"/>
+                        </span>
+                    </div>
+                    <hr>
+                    <div class="product-section-content">
+                        <p>
+                            Jest to jeden z najczęściej wybieranych noży do kuchni, zarówno przez profesjonalnych
+                            kucharzy jak i amatorów. Charakterystyczny kształt noża, wywodzący się z kuchni francuskiej
+                            wykorzystywany jest do wielu zadań kuchennych a nazwa nóż szefa kuchni, podkreśla fakt, że
+                            jest to nieodzowne narzędzie każdego kucharza. Nóż jest bardzo lekki a rękojeść pewnie leży
+                            zarówno w małych jak i dużych dłoniach. Dzięki idealnemu wyważeniu pomiędzy ostrzem a rączką
+                            pozwala na rytmiczny, bardzo wydajny, kołyszący ruch na powierzchni podczas krojenia w
+                            plastry lub siekania różnych produktów.
+                            Masahiro MSC to noże pomyślane o użytkownikach domowych. Nie znajdziemy tutaj wielu
+                            specjalistycznych noży o przeróżnych kształtach. Znajdziemy za to niezbędne i najczęściej
+                            wykorzystywane noże do pracy w domowej kuchni: nóż szefa kuchni, santoku oraz mały nóż
+                            uniwersalny. W ofercie jest również tradycyjny japoński nóż do krojenia warzyw - nakiri.
+                            Stal MBS-26, która została użyta do produkcji noży z tej serii, jest wyjątkowym stopem węgla
+                            (0,85-1,00%), chromu (13-15%) oraz molibdenu, manganu i wanadu. Materiał ten zawdzięcza
+                            swoje wyjątkowe właściwości specjalnej obróbce cieplnej. Sekret trójstopniowego procesu
+                            składającego się z hartowania, chłodzenia w bardzo niskiej temperaturze oraz odpuszczania aż
+                            do osiągnięcia twardości 58-59HRC znany jest tylko właścicielowi firmy - rodzinie Hattori.
+                            Otrzymana w ten sposób stal pozwala się zaostrzyć do niespotykanego poziomu ostrości a
+                            utrzymywanie dużej agresywności krawędzi tnącej przez bardzo długi okres czasu jest cechą
+                            charakterystyczną noży Masahiro, uznaną przez użytkowników na całym świecie. MBS-26 należy
+                            do grupy tzw. stali nierdzewnych, nie reaguje w kontakcie z kwaśnymi produktami zamianą
+                            koloru czy zapachu. Utrzymanie noży z tego stopu w nienagannym połyskującym stanie nie
+                            stanowi żadnego problemu. Wystarcza zwykłe mycie w letniej wodzie z dodatkiem płynu do mycia
+                            naczyń. Należy tylko pamiętać aby po myciu wytrzeć nóż do sucha.
+                            Rękojeść wykonana z drewna pakkawood została perfekcyjnie wyprofilowana i wykończona
+                            sprawiając, że trzymany nóż wydaję się być naturalnym przedłużeniem ręki a praca staje się
+                            łatwa i bardzo przyjemna.
+                        </p>
+                    </div>
+                </div>
+                <div class="product-section">
+                    <div class="product-section-header">
+                        <span>Specyfikacja</span>
+                        <span class="product-section-arrow">
+                            <img src="../../zdjecia/arrow-up.svg" alt="Rozwiń/Zwiń" class="arrow-up-svg"/>
+                        </span>
+                    </div>
+                    <hr>
+                    <div class="product-section-content">
+                        <table class="product-spec-table">
+                            <tr>
+                                <td>Typ stali</td>
+                                <td>MBS-26</td>
+                            </tr>
+                            <tr>
+                                <td>HRC</td>
+                                <td>58-59</td>
+                            </tr>
+                            <tr>
+                                <td>Materiał rękojeści</td>
+                                <td>drewno pakkawood</td>
+                            </tr>
+                            <tr>
+                                <td>Sposób ostrzenia</td>
+                                <td>dwustronny, asymetryczny 80/20</td>
+                            </tr>
+                            <tr>
+                                <td>Wymiary</td>
+                                <td>
+                                    <img src="../../zdjecia/wymiary.png" alt="Wymiary" class="product-dims-img">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Długość całkowita (A)</td>
+                                <td>270 mm</td>
+                            </tr>
+                            <tr>
+                                <td>Długość ostrza (Β)</td>
+                                <td>155 mm</td>
+                            </tr>
+                            <tr>
+                                <td>Szerokość (C)</td>
+                                <td>40 mm</td>
+                            </tr>
+                            <tr>
+                                <td>Grubość (D)</td>
+                                <td>1.8 mm</td>
+                            </tr>
+                            <tr>
+                                <td>Waga</td>
+                                <td>83 g</td>
+                            </tr>
+                            <tr>
+                                <td>Stal</td>
+                                <td>VG-10</td>
+                            </tr>
+                            <tr>
+                                <td>Długość ostrza</td>
+                                <td>21 cm</td>
+                            </tr>
+                            <tr>
+                                <td>Waga</td>
+                                <td>180 g</td>
+                            </tr>
+                            <tr>
+                                <td>Rękojeść</td>
+                                <td>Drewno</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+                <div class="product-section">
+                    <div class="product-section-header">
+                        <span>Zalety</span>
+                        <span class="product-section-arrow">
+                            <img src="../../zdjecia/arrow-up.svg" alt="Rozwiń/Zwiń" class="arrow-up-svg"/>
+                        </span>
+                    </div>
+                    <hr>
+                    <div class="product-section-content">
+                        <ul class="product-advantages">
+                            <li>Wyjątkowa ostrość</li>
+                            <li>Japońska stal</li>
+                            <li>Ergonomiczna rękojeść</li>
+                            <li>Tradycyjne wykonanie</li>
+                            <li>Wszystkie noże Masahiro są ekstremalnie ostre, zalecamy zatem użytkowanie z należytą
+                                ostrożnością.
+                            </li>
+                            <li>Noży Masahiro nie należy używać to krojenia zamrożonych produktów ( z wyjątkiem serii do
+                                tego przeznaczonej).
+                            </li>
+                            <li>Nie używaj noży do innych celów niż spożywcze.</li>
+                            <li>Do krojenia używaj drewnianych lub wykonanych z tworzywa desek do krojenia.</li>
+                            <li>Nie należy myć noży w zmywarkach, które niszczą krawędź tnącą.</li>
+                            <li>Myj nóż w ciepłej wodzie z dodatkiem płynu do mycia naczyń.</li>
+                            <li>Po umyciu wytrzyj nóż do sucha.</li>
+                        </ul>
+                    </div>
+                    <a href="../" class="zobacz-wiecej-szary">powrót do listy</a>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+</main>
+<div class="container">
+    <div class="recommended-section">
+        <hr class="recommended-hr">
+
+        <h2 class="recommended-title">Polecane produkty</h2>
+        <div class="recommended-carousel">
+            <button class="recommended-arrow left" type="button">
+                <svg class="arrow left arrow-left" width="24" height="18" viewBox="0 0 24 18" fill="none"
+                     xmlns="http://www.w3.org/2000/svg">
+                    <path
+                            d="M0.000527213 9.01872C0.00158197 9.04493 0.00474436 9.06579 0.00658876 9.0797L0.00790865 9.08906L0.00869447 9.09708L0.0102814 9.10484C0.030835 9.2153 0.0843285 9.31639 0.163384 9.39449L8.48317 17.8387C8.58831 17.946 8.72956 18.0003 8.86765 18C9.00547 18.0003 9.14618 17.946 9.25159 17.839C9.35673 17.7317 9.41101 17.5892 9.41075 17.449C9.41101 17.3089 9.35752 17.1666 9.25211 17.0596L1.85359 9.55095L23.4593 9.55095C23.757 9.54908 23.9987 9.30489 24 9.00267C24 8.69805 23.7589 8.44958 23.4593 8.44878L1.85095 8.44878L9.25185 0.94089C9.35699 0.833642 9.41075 0.69109 9.41049 0.551213C9.41075 0.411069 9.35725 0.268519 9.25185 0.161538L9.2508 0.160468C9.14539 0.0542895 9.0052 -0.000266432 8.86738 5.84413e-07C8.7293 5.72341e-07 8.5891 0.0540224 8.4837 0.160468L8.4829 0.161273L0.154424 8.61219C0.0563954 8.71382 0.000786628 8.85049 0.000260187 8.99304L7.87226e-07 8.99518L7.87039e-07 8.99732L7.86758e-07 9.00053L7.8601e-07 9.00909L0.000527213 9.01872Z"
+                            fill="black"/>
+                </svg>
+            </button>
+            <div class="recommended-products">
+                <div class="product-card">
+                    <a href="produkt.html">
+                        <img src="../../zdjecia/noz1.png" alt="Polecany 1">
+                        <h4>Product A</h4>
+                        <div class="price-container">
+                            <div class="old-price">
+                                <span>350 zł</span>
+                                <span class="info-icon"></span>
+                            </div>
+                            <div class="promo-price">300 zł</div>
+                        </div>
+                        <button class="zobacz-wiecej-szary" type="button">Zobacz więcej</button>
+                    </a>
+                </div>
+                <div class="product-card">
+                    <a href="produkt.html">
+                        <img src="../../zdjecia/noz1.png" alt="Polecany 2">
+                        <h4>Product B</h4>
+                        <div class="price-container">
+                            <div class="old-price">
+                                <span>400 zł</span>
+                                <span class="info-icon"></span>
+                            </div>
+                            <div class="promo-price">350 zł</div>
+                        </div>
+                        <button class="zobacz-wiecej-szary" type="button">Zobacz więcej</button>
+                    </a>
+                </div>
+                <div class="product-card">
+                    <a href="produkt.html">
+                        <img src="../../zdjecia/noz1.png" alt="Polecany 3">
+                        <h4>Product C</h4>
+                        <div class="price-container">
+                            <div class="old-price">
+                                <span>450 zł</span>
+                                <span class="info-icon"></span>
+                            </div>
+                            <div class="promo-price">400 zł</div>
+                        </div>
+                        <button class="zobacz-wiecej-szary" type="button">Zobacz więcej</button>
+                    </a>
+                </div>
+                <div class="product-card">
+                    <a href="produkt.html">
+                        <img src="../../zdjecia/noz1.png" alt="Polecany 4">
+                        <h4>Product D</h4>
+                        <div class="price-container">
+                            <div class="old-price">
+                                <span>500 zł</span>
+                                <span class="info-icon"></span>
+                            </div>
+                            <div class="promo-price">450 zł</div>
+                        </div>
+                        <button class="zobacz-wiecej-szary" type="button">Zobacz więcej</button>
+                    </a>
+                </div>
+            </div>
+            <button class="recommended-arrow right" type="button">
+                <svg class="arrow right arrow-right" width="24" height="18" viewBox="0 0 24 18" fill="none"
+                     xmlns="http://www.w3.org/2000/svg">
+                    <path
+                            d="M23.9995 8.98128C23.9984 8.95507 23.9953 8.93421 23.9934 8.9203L23.9921 8.91094L23.9913 8.90292L23.9897 8.89516C23.9692 8.7847 23.9157 8.68361 23.8366 8.60551L15.5168 0.161273C15.4117 0.0540253 15.2704 -0.000266468 15.1324 9.83317e-07C14.9945 -0.000266468 14.8538 0.0540254 14.7484 0.161006C14.6433 0.268254 14.589 0.410805 14.5893 0.55095C14.589 0.691094 14.6425 0.833379 14.7479 0.940359L22.1464 8.44905H0.540739C0.242964 8.45092 0.00131798 8.69511 0 8.99733C0 9.30195 0.241119 9.55042 0.540739 9.55122H22.1491L14.7482 17.0591C14.643 17.1664 14.5892 17.3089 14.5895 17.4488C14.5892 17.5889 14.6427 17.7315 14.7482 17.8385L14.7492 17.8395C14.8546 17.9457 14.9948 18.0003 15.1326 18C15.2707 18 15.4109 17.946 15.5163 17.8395L15.5171 17.8387L23.8456 9.38781C23.9436 9.28618 23.9992 9.14951 23.9997 9.00696L24 9.00482V9.00267V8.99946V8.99091L23.9995 8.98128Z"
+                            fill="black"/>
+                </svg>
+            </button>
+        </div>
+    </div>
+</div>
+<!-- Polecane produkty -->
+
+
+<footer>
+    <div class="container">
+        <div class="footer-grid">
+            <div class="footer-logo">
+                <img src="../../zdjecia/logo.png" alt="Logo">
+            </div>
+            <div class="footer-column">
+                <h3>Informacje</h3>
+                <ul>
+                    <li><a href="../regulamin/">Regulamin</a></li>
+                    <li><a href="../kontakt/">Kontakt</a></li>
+                    <li><a href="#">Wysyłka</a></li>
+                    <li><a href="#">Informacji</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <ul>
+                    <li><a href="../produkty/">Oferta</a></li>
+                    <li><a href="#">Płatności</a></li>
+                    <li><a href="#">Odstąpienie umowy</a></li>
+                    <li><a href="#">Odbiór osobisty</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Sekiryu International</h3>
+                <ul>
+                    <li>1 rue Rohan</li>
+                    <li>67790 STEINBOURG, France</li>
+                    <li>Napisz do nas</li>
+                    <li><a href="mailto:meilleur@couteau.info"><b>meilleur@couteau.info</b></a></li>
+                </ul>
+            </div>
+            <div class="footer-image">
+                <h3>Dostawa i płatności</h3>
+                <img src="../../zdjecia/dostawa.png" alt="Dostawa">
+            </div>
+        </div>
+        <hr>
+        <p class="footerextra">Właścicielem serwisu jest firma Nazwa Firmy, wpisana w Centralnej Ewidencji i Informacji
+            o Działalności Gospodarczej, posiadającą adres miejsca głównego wykonywania działalności: ul. Przykładowa
+            00, 00-000 Miasto adres do doręczeń: ul. Przykładowa 00, 00-000 Miasto, NIP: 0000000000, REGON: 000000000,
+            adres poczty elektronicznej: nazwadomeny@gmail.com, numer telefonu: 000 000 000</p>
+        <hr>
+        <div class="footer-info">
+            <p>Copyright &copy; Haiku</p>
+            <p>Created by <a href="https://undicom.pl" target="_blank">Undicom.pl</a></p>
+        </div>
+
+    </div>
+</footer>
+<script src="../../menu.js"></script>
+<script>
+    // Obsługa przycisków +/-
+    document.addEventListener('DOMContentLoaded', function () {
+        const minus = document.querySelector('.qty-minus');
+        const plus = document.querySelector('.qty-plus');
+        const input = document.querySelector('.qty-input');
+        minus.addEventListener('click', function () {
+            let val = parseInt(input.value, 10) || 1;
+            if (val > 1) input.value = val - 1;
+        });
+        plus.addEventListener('click', function () {
+            let val = parseInt(input.value, 10) || 1;
+            input.value = val + 1;
+        });
+
+        // Rozwijanie/zwijanie sekcji produktu
+        document.querySelectorAll('.product-section').forEach(function (section) {
+            section.setAttribute('aria-expanded', 'true');
+            const header = section.querySelector('.product-section-header');
+            header.addEventListener('click', function () {
+                const expanded = section.getAttribute('aria-expanded') === 'true';
+                section.setAttribute('aria-expanded', expanded ? 'false' : 'true');
+                // Obrót strzałki SVG obsługuje CSS, tylko dodaj transition
+                const arrowImg = header.querySelector('.product-section-arrow img');
+                if (arrowImg) {
+                    arrowImg.style.transition = 'transform 0.3s';
+                }
+            });
+        });
+
+        // Obsługa galerii produktu
+        const images = [
+            "../../zdjecia/noz1.png",
+            "../../zdjecia/noz1.png",
+            "../../zdjecia/noz1.png"
+        ];
+        let currentIndex = 0;
+        const mainImg = document.getElementById('mainProductImage');
+        const leftBtn = document.getElementById('arrowLeft');
+        const rightBtn = document.getElementById('arrowRight');
+        const thumbs = document.querySelectorAll('.product-thumb img');
+
+        function updateMainImage(idx) {
+            currentIndex = idx;
+            mainImg.src = images[currentIndex];
+        }
+
+        leftBtn.addEventListener('click', function () {
+            currentIndex = (currentIndex - 1 + images.length) % images.length;
+            updateMainImage(currentIndex);
+        });
+
+        rightBtn.addEventListener('click', function () {
+            currentIndex = (currentIndex + 1) % images.length;
+            updateMainImage(currentIndex);
+        });
+
+        thumbs.forEach(function (thumb, idx) {
+            thumb.addEventListener('click', function () {
+                updateMainImage(idx);
+            });
+        });
+
+        // Inicjalizacja
+        updateMainImage(0);
+
+        // Karuzela polecanych produktów
+        const recommendedProducts = [
+            {
+                img: "../../zdjecia/noz1.png",
+                name: "Product A",
+                old: "350 zł",
+                promo: "300 zł"
+            },
+            {
+                img: "../../zdjecia/noz1.png",
+                name: "Product B",
+                old: "400 zł",
+                promo: "350 zł"
+            },
+            {
+                img: "../../zdjecia/noz1.png",
+                name: "Product C",
+                old: "450 zł",
+                promo: "400 zł"
+            },
+            {
+                img: "../../zdjecia/noz1.png",
+                name: "Product D",
+                old: "500 zł",
+                promo: "450 zł"
+            },
+            {
+                img: "../../zdjecia/noz1.png",
+                name: "Product E",
+                old: "550 zł",
+                promo: "500 zł"
+            },
+            {
+                img: "../../zdjecia/noz1.png",
+                name: "Product F",
+                old: "600 zł",
+                promo: "550 zł"
+            }
+        ];
+        let recIndex = 0;
+        const recVisible = 4;
+        const recContainer = document.querySelector('.recommended-products');
+        const recLeft = document.querySelector('.recommended-arrow.left');
+        const recRight = document.querySelector('.recommended-arrow.right');
+
+        function renderRecommended(withAnim = false) {
+            if (withAnim) {
+                recContainer.classList.add('anim-fade-out');
+                setTimeout(() => {
+                    recContainer.innerHTML = '';
+                    for (let i = 0; i < recVisible; i++) {
+                        const prod = recommendedProducts[(recIndex + i) % recommendedProducts.length];
+                        const card = document.createElement('div');
+                        card.className = 'product-card';
+                        card.innerHTML = `
+                            <a href="produkt.html">
+                                <img src="${prod.img}" alt="${prod.name}">
+                                <h4>${prod.name}</h4>
+                                <div class="price-container">
+                                    <div class="old-price">
+                                        <span>${prod.old}</span>
+                                        <span class="info-icon"></span>
+                                    </div>
+                                    <div class="promo-price">${prod.promo}</div>
+                                </div>
+                                <button class="zobacz-wiecej-szary" type="button">Zobacz więcej</button>
+                            </a>
+                        `;
+                        recContainer.appendChild(card);
+                    }
+                    recContainer.classList.remove('anim-fade-out');
+                    recContainer.classList.add('anim-fade-in');
+                    setTimeout(() => {
+                        recContainer.classList.remove('anim-fade-in');
+                    }, 300);
+                }, 300);
+            } else {
+                recContainer.innerHTML = '';
+                for (let i = 0; i < recVisible; i++) {
+                    const prod = recommendedProducts[(recIndex + i) % recommendedProducts.length];
+                    const card = document.createElement('div');
+                    card.className = 'product-card';
+                    card.innerHTML = `
+                        <a href="produkt.html">
+                            <img src="${prod.img}" alt="${prod.name}">
+                            <h4>${prod.name}</h4>
+                            <div class="price-container">
+                                <div class="old-price">
+                                    <span>${prod.old}</span>
+                                    <span class="info-icon"></span>
+                                </div>
+                                <div class="promo-price">${prod.promo}</div>
+                            </div>
+                            <button class="zobacz-wiecej-szary" type="button">Zobacz więcej</button>
+                        </a>
+                    `;
+                    recContainer.appendChild(card);
+                }
+            }
+        }
+
+        recLeft.addEventListener('click', function () {
+            recIndex = (recIndex - 1 + recommendedProducts.length) % recommendedProducts.length;
+            renderRecommended(true);
+        });
+        recRight.addEventListener('click', function () {
+            recIndex = (recIndex + 1) % recommendedProducts.length;
+            renderRecommended(true);
+        });
+
+        renderRecommended();
+    });
+</script>
+</body>
+</html>
