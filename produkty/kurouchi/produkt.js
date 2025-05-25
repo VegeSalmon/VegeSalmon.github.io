@@ -103,12 +103,31 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     ];
     let recIndex = 0;
-    const recVisible = 4;
+    let recVisible = 4; // domyślna liczba, nadpisywana przez JS
     const recContainer = document.querySelector('.recommended-products');
     const recLeft = document.querySelector('.recommended-arrow.left');
     const recRight = document.querySelector('.recommended-arrow.right');
 
+    function getVisibleCount() {
+        // Szerokość jednej karty + gap
+        const cardMinWidth = 220;
+        const cardMaxWidth = 300;
+        const cardDefaultWidth = 260;
+        const gap = 20;
+        // Szerokość kontenera (uwzględnia padding)
+        const container = recContainer.parentElement; // recommended-carousel
+        const containerWidth = container.offsetWidth - 112; // padding 56px z każdej strony
+        // Przyjmij szerokość karty jako 260px (średnia)
+        let count = Math.floor((containerWidth + gap) / (cardDefaultWidth + gap));
+        if (count < 1) count = 1;
+        return count;
+    }
+
     function renderRecommended(withAnim = false) {
+        recVisible = getVisibleCount();
+        // Zapobiegaj wyświetlaniu więcej kart niż produktów
+        if (recVisible > recommendedProducts.length) recVisible = recommendedProducts.length;
+
         if (withAnim) {
             recContainer.classList.add('anim-fade-out');
             setTimeout(() => {
@@ -165,12 +184,19 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     recLeft.addEventListener('click', function () {
+        recVisible = getVisibleCount();
         recIndex = (recIndex - 1 + recommendedProducts.length) % recommendedProducts.length;
         renderRecommended(true);
     });
     recRight.addEventListener('click', function () {
+        recVisible = getVisibleCount();
         recIndex = (recIndex + 1) % recommendedProducts.length;
         renderRecommended(true);
+    });
+
+    window.addEventListener('resize', function () {
+        // Przy zmianie rozmiaru okna, przelicz liczbę widocznych kart i odśwież karuzelę
+        renderRecommended();
     });
 
     renderRecommended();

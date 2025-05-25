@@ -1,4 +1,13 @@
 @media (max-width: 1200px) {
+    .produkty-content {
+        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)) !important;
+        gap: 16px !important;
+        padding-left: 16px !important;
+        padding-right: 16px !important;
+    }
+    .produkty-aside {
+        display: none !important;
+    }
     .container, .historia, .produkty, .footer-grid, .recommended-section {
         padding-left: 16px !important;
         padding-right: 16px !important;
@@ -6,9 +15,11 @@
 
     .footer-grid {
         gap: 10px !important;
+        padding-bottom: 0 !important;
     }
 
     .produkty-grid {
+        grid-template-columns: repeat(2, 1fr) !important;
         gap: 12px !important;
     }
 
@@ -28,9 +39,25 @@
     }
 
     .produkty-content {
-        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)) !important;
         gap: 16px !important;
+    }
+
+    .product-main-container {
+        flex-direction: column !important;
+        gap: 40px !important;
+    }
+    .product-main-left {
+        max-width: 500px !important;
+        width: 100% !important;
         padding-left: 0 !important;
+        padding-right: 0 !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
+    }
+    .product-main-right {
+        width: 100% !important;
+        padding-left: 0 !important;
+        padding-right: 0 !important;
     }
 }
 
@@ -39,6 +66,12 @@
 }
 
 @media (max-width: 900px) {
+    .produkty-content {
+        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)) !important;
+        gap: 10px !important;
+        padding-left: 15px !important;
+        padding-right: 15px !important;
+    }
     .container,
     .produkty,
     .historia,
@@ -56,7 +89,6 @@
     }
 
     .produkty-grid {
-        grid-template-columns: 1fr 1fr !important;
         gap: 10px !important;
     }
 
@@ -140,7 +172,8 @@
     .footer-column ul li,
     .footer-column ul,
     .footer-column h3 {
-        text-align: left !important;
+        width: 100% !important;
+        box-sizing: border-box !important;
     }
 
     .footer-image {
@@ -204,17 +237,6 @@
         display: block !important;
     }
 
-    .footer-column ul,
-    .footer-column ul li,
-    .footer-column h3 {
-        text-align: center !important;
-        width: 100% !important;
-        box-sizing: border-box !important;
-    }
-
-    .footer-column ul li {
-        display: block !important;
-    }
 
     .footerextra,
     .footer-info,
@@ -246,7 +268,6 @@
         min-height: 0 !important;
         max-width: 100vw !important;
         max-height: none !important;
-        padding-top: 55px !important;
         box-sizing: border-box !important;
         position: relative !important;
         display: flex !important;
@@ -348,6 +369,12 @@
 }
 
 @media (max-width: 700px) {
+    .produkty-content {
+        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)) !important;
+        gap: 10px !important;
+        padding-left: 10px !important;
+        padding-right: 10px !important;
+    }
     .container,
     .produkty,
     .historia,
@@ -368,11 +395,12 @@
         gap: 10px !important;
         grid-template-columns: 1fr !important;
         grid-template-rows: repeat(5, auto) !important;
-        padding: 40px 0 !important;
+        padding-top: 40px !important;
+        padding-bottom: 0 !important;
     }
 
     .produkty-grid {
-        grid-template-columns: 1fr 1fr !important;
+        grid-template-columns: 1fr !important;
         gap: 10px !important;
     }
 
@@ -432,7 +460,6 @@
         min-height: 0 !important;
         max-width: 100vw !important;
         max-height: none !important;
-        padding-top: 55px !important;
         box-sizing: border-box !important;
         position: relative !important;
         display: flex !important;
@@ -485,6 +512,7 @@
         font-size: 18px !important;
         cursor: pointer;
         width: 100%;
+        text-align: left !important;
     }
 
     .footer-column ul,
@@ -530,19 +558,35 @@
     }
 
     .produkty-content {
-        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)) !important;
         gap: 10px !important;
-        padding-left: 0 !important;
+    }
+
+    .footer-column ul,
+    .footer-column ul li,
+    .footer-column h3 {
+        width: 100% !important;
+        box-sizing: border-box !important;
+    }
+
+    .sort-container {
+        flex-direction: column !important;
+        align-items: stretch !important;
+        gap: 12px !important;
     }
 }
 
 @media (max-width: 500px) {
     .produkty-content {
-        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)) !important;
         gap: 8px !important;
-        padding-left: 0 !important;
     }
     #menu a {
         text-align: center !important;
     }
+    .produkty-content {
+        grid-template-columns: 1fr !important;
+        gap: 8px !important;
+        padding-left: 5px !important;
+        padding-right: 5px !important;
+    }
+   
 }

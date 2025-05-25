@@ -193,23 +193,23 @@
             <button class="filter-button">Filtruj produkty</button>
         </aside>
         <div class="center-produkty">
+            <div class="tytul">
+                <h1 class="centered-title">Produkty marki Sekiryu</h1>
+            </div>
+            <div class="produkty-controls">
+                <label class="sort-select-label">Sortowanie&nbsp;
+                    <select class="sort-select">
+                        <option value="a-z">A-Z</option>
+                        <option value="z-a">Z-A</option>
+                        <option value="price-asc">Cena rosnąca</option>
+                        <option value="price-desc">Cena malejąca</option>
+                    </select>
+                </label>
+                <button type="button" class="zobacz-wiecej-szary kategorie-toggle" id="kategorieToggle"
+                        style="display:none;">Kategorie
+                </button>
+            </div>
             <section class="produkty-content">
-                <div class="tytul">
-                    <h1 class="centered-title">Produkty marki Sekiryu</h1>
-                    <div class="produkty-controls">
-                        <label class="sort-select-label">Sortowanie&nbsp;
-                            <select class="sort-select">
-                                <option value="a-z">A-Z</option>
-                                <option value="z-a">Z-A</option>
-                                <option value="price-asc">Cena rosnąca</option>
-                                <option value="price-desc">Cena malejąca</option>
-                            </select>
-                        </label>
-                        <!-- Przycisk do otwierania kategorii (tylko <1200px) -->
-                        <button type="button" class="zobacz-wiecej-szary kategorie-toggle" id="kategorieToggle" style="display:none;">Kategorie</button>
-                    </div>
-                </div>
-
                 <div class="product-card">
                     <a href="kurouchi/produkt.html" style="display:block; color:inherit; text-decoration:none;">
                         <img src="../zdjecia/noz1.png" alt="Product 1">
@@ -488,7 +488,7 @@
                 </aside>
             </div>
             <div class="pagination" id="produktyPagination">
-                <!-- Tu będzie dynamiczna paginacja -->
+
             </div>
         </div>
     </div>

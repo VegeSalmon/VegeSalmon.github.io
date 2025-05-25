@@ -13,18 +13,20 @@ document.addEventListener('DOMContentLoaded', () => {
             hamburger.classList.toggle('open');
             menu.classList.toggle('open');
 
-            // Przełącz przezroczystość headera (tylko na stronie głównej)
-            if (!isRegulaminPage) {
-                if (menu.classList.contains('open')) {
-                    header.classList.remove('transparent');
-                } else if (window.scrollY === 0) {
-                    header.classList.add('transparent');
-                }
-            }
+
         });
+
+        menu.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                hamburger.classList.remove('open');
+                menu.classList.remove('open');
+            });
+        });
+
+
+
     }
 
-    // Podświetl aktywny link w nawigacji
     const currentPage = window.location.pathname;
     navLinks.forEach(link => {
         const href = link.getAttribute('href');
@@ -37,7 +39,6 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    // Smooth scroll z uwzględnieniem wysokości headera
     if (scrollLinks.length > 0 && header) {
         const headerHeight = header.offsetHeight;
         const headerMarginBottom = parseInt(window.getComputedStyle(header).marginBottom, 10) || 0;

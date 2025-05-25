@@ -17,7 +17,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Zarządzaj przezroczystością przy scrollowaniu (tylko na stronie głównej)
     window.addEventListener('scroll', () => {
-        if (!isRegulaminPage && (!menu || !menu.classList.contains('open'))) {
+        // Jeśli menu jest otwarte, header zawsze czarny
+        if (menu && menu.classList.contains('open')) {
+            header.classList.remove('transparent');
+            return;
+        }
+        if (!isRegulaminPage) {
             if (window.scrollY === 0) {
                 header.classList.add('transparent');
             } else {
@@ -25,6 +30,18 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         }
     });
+
+    // Gdy menu się otwiera/zamyka, wymuś kolor headera
+    if (menu) {
+        const observer = new MutationObserver(() => {
+            if (menu.classList.contains('open')) {
+                header.classList.remove('transparent');
+            } else if (!isRegulaminPage && window.scrollY === 0) {
+                header.classList.add('transparent');
+            }
+        });
+        observer.observe(menu, { attributes: true, attributeFilter: ['class'] });
+    }
 });
 document.addEventListener("DOMContentLoaded", () => {
     const images = ["zdjecia/glowna.png", "zdjecia/produkt1.png", "zdjecia/produkt2.png"];
