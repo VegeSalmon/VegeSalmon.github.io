@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../../style.css">
+    <link rel="stylesheet" href="../../responsive.css">
     <title>Kurouchi</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -81,7 +82,7 @@
     </div>
 </header>
 
-<main class="regulamin">
+<main class="main-container">
     <div class="container">
         <div class="heading">
             <nav class="breadcrumb">
@@ -100,18 +101,28 @@
             <div class="product-main-image">
                 <img id="mainProductImage" src="../../zdjecia/noz1.png" alt="Nóż główny">
                 <button class="product-image-arrow left" id="arrowLeft" type="button">
-                    <img src="../../zdjecia/arrow-left.svg" alt="Poprzednie zdjęcie">
+                    <svg class="arrow left arrow-left" width="24" height="18" viewBox="0 0 24 18" fill="none"
+                         xmlns="http://www.w3.org/2000/svg">
+                        <path
+                                d="M0.000527213 9.01872C0.00158197 9.04493 0.00474436 9.06579 0.00658876 9.0797L0.00790865 9.08906L0.00869447 9.09708L0.0102814 9.10484C0.030835 9.2153 0.0843285 9.31639 0.163384 9.39449L8.48317 17.8387C8.58831 17.946 8.72956 18.0003 8.86765 18C9.00547 18.0003 9.14618 17.946 9.25159 17.839C9.35673 17.7317 9.41101 17.5892 9.41075 17.449C9.41101 17.3089 9.35752 17.1666 9.25211 17.0596L1.85359 9.55095L23.4593 9.55095C23.757 9.54908 23.9987 9.30489 24 9.00267C24 8.69805 23.7589 8.44958 23.4593 8.44878L1.85095 8.44878L9.25185 0.94089C9.35699 0.833642 9.41075 0.69109 9.41049 0.551213C9.41075 0.411069 9.35725 0.268519 9.25185 0.161538L9.2508 0.160468C9.14539 0.0542895 9.0052 -0.000266432 8.86738 5.84413e-07C8.7293 5.72341e-07 8.5891 0.0540224 8.4837 0.160468L8.4829 0.161273L0.154424 8.61219C0.0563954 8.71382 0.000786628 8.85049 0.000260187 8.99304L7.87226e-07 8.99518L7.87039e-07 8.99732L7.86758e-07 9.00053L7.8601e-07 9.00909L0.000527213 9.01872Z"
+                                fill="black" />
+                    </svg>
                 </button>
                 <button class="product-image-arrow right" id="arrowRight" type="button">
-                    <img src="../../zdjecia/arrow-right.svg" alt="Następne zdjęcie">
+                    <svg class="arrow right arrow-right" width="24" height="18" viewBox="0 0 24 18" fill="none"
+                         xmlns="http://www.w3.org/2000/svg">
+                        <path
+                                d="M23.9995 8.98128C23.9984 8.95507 23.9953 8.93421 23.9934 8.9203L23.9921 8.91094L23.9913 8.90292L23.9897 8.89516C23.9692 8.7847 23.9157 8.68361 23.8366 8.60551L15.5168 0.161273C15.4117 0.0540253 15.2704 -0.000266468 15.1324 9.83317e-07C14.9945 -0.000266468 14.8538 0.0540254 14.7484 0.161006C14.6433 0.268254 14.589 0.410805 14.5893 0.55095C14.589 0.691094 14.6425 0.833379 14.7479 0.940359L22.1464 8.44905H0.540739C0.242964 8.45092 0.00131798 8.69511 0 8.99733C0 9.30195 0.241119 9.55042 0.540739 9.55122H22.1491L14.7482 17.0591C14.643 17.1664 14.5892 17.3089 14.5895 17.4488C14.5892 17.5889 14.6427 17.7315 14.7482 17.8385L14.7492 17.8395C14.8546 17.9457 14.9948 18.0003 15.1326 18C15.2707 18 15.4109 17.946 15.5163 17.8395L15.5171 17.8387L23.8456 9.38781C23.9436 9.28618 23.9992 9.14951 23.9997 9.00696L24 9.00482V9.00267V8.99946V8.99091L23.9995 8.98128Z"
+                                fill="black" />
+                    </svg>
                 </button>
             </div>
             <div class="product-main-thumbs">
                 <div class="product-thumb">
-                    <img src="../../zdjecia/noz1.png" alt="Miniatura 1" data-img="../../zdjecia/noz1.png">
+                    <img src="../../zdjecia/noze2.png" alt="Miniatura 1">
                 </div>
                 <div class="product-thumb">
-                    <img src="../../zdjecia/noz1.png" alt="Miniatura 2" data-img="../../zdjecia/noz1.png">
+                    <img src="../../zdjecia/produkt1.png" alt="Miniatura 2">
                 </div>
             </div>
         </div>
@@ -380,20 +391,21 @@
     <div class="container">
         <div class="footer-grid">
             <div class="footer-logo">
-                <img src="../../zdjecia/logo.png" alt="Logo">
+                <img src="/zdjecia/logo.png" alt="Logo">
             </div>
             <div class="footer-column">
                 <h3>Informacje</h3>
                 <ul>
-                    <li><a href="../regulamin/">Regulamin</a></li>
-                    <li><a href="../kontakt/">Kontakt</a></li>
+                    <li><a href="regulamin/">Regulamin</a></li>
+                    <li><a href="kontakt/">Kontakt</a></li>
                     <li><a href="#">Wysyłka</a></li>
                     <li><a href="#">Informacji</a></li>
                 </ul>
             </div>
             <div class="footer-column">
+                <h3 class="footer-text">Oferta</h3>
                 <ul>
-                    <li><a href="../produkty/">Oferta</a></li>
+                    <li><a href="produkty/">Oferta</a></li>
                     <li><a href="#">Płatności</a></li>
                     <li><a href="#">Odstąpienie umowy</a></li>
                     <li><a href="#">Odbiór osobisty</a></li>
@@ -408,203 +420,22 @@
                     <li><a href="mailto:meilleur@couteau.info"><b>meilleur@couteau.info</b></a></li>
                 </ul>
             </div>
-            <div class="footer-image">
+            <div class="footer-image footer-column">
                 <h3>Dostawa i płatności</h3>
-                <img src="../../zdjecia/dostawa.png" alt="Dostawa">
+                <img src="/zdjecia/dostawa.png" alt="Dostawa" class="footer-image-content">
             </div>
         </div>
         <hr>
-        <p class="footerextra">Właścicielem serwisu jest firma Nazwa Firmy, wpisana w Centralnej Ewidencji i Informacji
-            o Działalności Gospodarczej, posiadającą adres miejsca głównego wykonywania działalności: ul. Przykładowa
-            00, 00-000 Miasto adres do doręczeń: ul. Przykładowa 00, 00-000 Miasto, NIP: 0000000000, REGON: 000000000,
-            adres poczty elektronicznej: nazwadomeny@gmail.com, numer telefonu: 000 000 000</p>
+        <p class="footerextra">Właścicielem serwisu jest firma Nazwa Firmy, wpisana w Centralnej Ewidencji i Informacji o Działalności Gospodarczej, posiadającą adres miejsca głównego wykonywania działalności: ul. Przykładowa 00, 00-000 Miasto  adres do doręczeń: ul. Przykładowa 00, 00-000 Miasto, NIP: 0000000000, REGON: 000000000, adres poczty elektronicznej: nazwadomeny@gmail.com, numer telefonu: 000 000 000</p>
         <hr>
         <div class="footer-info">
-            <p>Copyright &copy; Haiku</p>
-            <p>Created by <a href="https://undicom.pl" target="_blank">Undicom.pl</a></p>
+            <p>Copyright &copy; Haiku</p><p>Created by <a href="https://undicom.pl" target="_blank">Undicom.pl</a></p>
         </div>
 
     </div>
 </footer>
+
 <script src="../../menu.js"></script>
-<script>
-    // Obsługa przycisków +/-
-    document.addEventListener('DOMContentLoaded', function () {
-        const minus = document.querySelector('.qty-minus');
-        const plus = document.querySelector('.qty-plus');
-        const input = document.querySelector('.qty-input');
-        minus.addEventListener('click', function () {
-            let val = parseInt(input.value, 10) || 1;
-            if (val > 1) input.value = val - 1;
-        });
-        plus.addEventListener('click', function () {
-            let val = parseInt(input.value, 10) || 1;
-            input.value = val + 1;
-        });
-
-        // Rozwijanie/zwijanie sekcji produktu
-        document.querySelectorAll('.product-section').forEach(function (section) {
-            section.setAttribute('aria-expanded', 'true');
-            const header = section.querySelector('.product-section-header');
-            header.addEventListener('click', function () {
-                const expanded = section.getAttribute('aria-expanded') === 'true';
-                section.setAttribute('aria-expanded', expanded ? 'false' : 'true');
-                // Obrót strzałki SVG obsługuje CSS, tylko dodaj transition
-                const arrowImg = header.querySelector('.product-section-arrow img');
-                if (arrowImg) {
-                    arrowImg.style.transition = 'transform 0.3s';
-                }
-            });
-        });
-
-        // Obsługa galerii produktu
-        const images = [
-            "../../zdjecia/noz1.png",
-            "../../zdjecia/noz1.png",
-            "../../zdjecia/noz1.png"
-        ];
-        let currentIndex = 0;
-        const mainImg = document.getElementById('mainProductImage');
-        const leftBtn = document.getElementById('arrowLeft');
-        const rightBtn = document.getElementById('arrowRight');
-        const thumbs = document.querySelectorAll('.product-thumb img');
-
-        function updateMainImage(idx) {
-            currentIndex = idx;
-            mainImg.src = images[currentIndex];
-        }
-
-        leftBtn.addEventListener('click', function () {
-            currentIndex = (currentIndex - 1 + images.length) % images.length;
-            updateMainImage(currentIndex);
-        });
-
-        rightBtn.addEventListener('click', function () {
-            currentIndex = (currentIndex + 1) % images.length;
-            updateMainImage(currentIndex);
-        });
-
-        thumbs.forEach(function (thumb, idx) {
-            thumb.addEventListener('click', function () {
-                updateMainImage(idx);
-            });
-        });
-
-        // Inicjalizacja
-        updateMainImage(0);
-
-        // Karuzela polecanych produktów
-        const recommendedProducts = [
-            {
-                img: "../../zdjecia/noz1.png",
-                name: "Product A",
-                old: "350 zł",
-                promo: "300 zł"
-            },
-            {
-                img: "../../zdjecia/noz1.png",
-                name: "Product B",
-                old: "400 zł",
-                promo: "350 zł"
-            },
-            {
-                img: "../../zdjecia/noz1.png",
-                name: "Product C",
-                old: "450 zł",
-                promo: "400 zł"
-            },
-            {
-                img: "../../zdjecia/noz1.png",
-                name: "Product D",
-                old: "500 zł",
-                promo: "450 zł"
-            },
-            {
-                img: "../../zdjecia/noz1.png",
-                name: "Product E",
-                old: "550 zł",
-                promo: "500 zł"
-            },
-            {
-                img: "../../zdjecia/noz1.png",
-                name: "Product F",
-                old: "600 zł",
-                promo: "550 zł"
-            }
-        ];
-        let recIndex = 0;
-        const recVisible = 4;
-        const recContainer = document.querySelector('.recommended-products');
-        const recLeft = document.querySelector('.recommended-arrow.left');
-        const recRight = document.querySelector('.recommended-arrow.right');
-
-        function renderRecommended(withAnim = false) {
-            if (withAnim) {
-                recContainer.classList.add('anim-fade-out');
-                setTimeout(() => {
-                    recContainer.innerHTML = '';
-                    for (let i = 0; i < recVisible; i++) {
-                        const prod = recommendedProducts[(recIndex + i) % recommendedProducts.length];
-                        const card = document.createElement('div');
-                        card.className = 'product-card';
-                        card.innerHTML = `
-                            <a href="produkt.html">
-                                <img src="${prod.img}" alt="${prod.name}">
-                                <h4>${prod.name}</h4>
-                                <div class="price-container">
-                                    <div class="old-price">
-                                        <span>${prod.old}</span>
-                                        <span class="info-icon"></span>
-                                    </div>
-                                    <div class="promo-price">${prod.promo}</div>
-                                </div>
-                                <button class="zobacz-wiecej-szary" type="button">Zobacz więcej</button>
-                            </a>
-                        `;
-                        recContainer.appendChild(card);
-                    }
-                    recContainer.classList.remove('anim-fade-out');
-                    recContainer.classList.add('anim-fade-in');
-                    setTimeout(() => {
-                        recContainer.classList.remove('anim-fade-in');
-                    }, 300);
-                }, 300);
-            } else {
-                recContainer.innerHTML = '';
-                for (let i = 0; i < recVisible; i++) {
-                    const prod = recommendedProducts[(recIndex + i) % recommendedProducts.length];
-                    const card = document.createElement('div');
-                    card.className = 'product-card';
-                    card.innerHTML = `
-                        <a href="produkt.html">
-                            <img src="${prod.img}" alt="${prod.name}">
-                            <h4>${prod.name}</h4>
-                            <div class="price-container">
-                                <div class="old-price">
-                                    <span>${prod.old}</span>
-                                    <span class="info-icon"></span>
-                                </div>
-                                <div class="promo-price">${prod.promo}</div>
-                            </div>
-                            <button class="zobacz-wiecej-szary" type="button">Zobacz więcej</button>
-                        </a>
-                    `;
-                    recContainer.appendChild(card);
-                }
-            }
-        }
-
-        recLeft.addEventListener('click', function () {
-            recIndex = (recIndex - 1 + recommendedProducts.length) % recommendedProducts.length;
-            renderRecommended(true);
-        });
-        recRight.addEventListener('click', function () {
-            recIndex = (recIndex + 1) % recommendedProducts.length;
-            renderRecommended(true);
-        });
-
-        renderRecommended();
-    });
-</script>
+<script src="produkt.js"></script>
 </body>
 </html>
