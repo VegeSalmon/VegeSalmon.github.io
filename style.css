@@ -468,7 +468,22 @@ footer .container {
     font-weight: 600;
     font-size: 22px;
     margin-bottom: 40px;
-    letter-spacing: .05em
+    letter-spacing: .05em;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+}
+
+.footer-column h3::after,
+.footer-image h3::after {
+    display: none;
+
+}
+
+.footer-column.active h3::after,
+.footer-image.active h3::after {
+    transform: rotate(180deg) translateY(-50%);
 }
 
 .footer-column ul,ul {
@@ -497,7 +512,8 @@ hr {
 }
 
 .footerextra {
-    padding: 25px 0
+    padding: 25px 0;
+
 }
 
 a {
@@ -592,7 +608,7 @@ a {
     font-size: 16px;
     line-height: 24px;
     border-top: 1px solid rgba(255,255,255,.3);
-    display: block
+    display: block;
 }
 
 .menu a.active {
@@ -1487,6 +1503,53 @@ input[type=number] {
         padding-left: 15px!important;
         padding-right: 15px!important
     }
+
+    .footer-column ul {
+        display: none !important;
+        max-height: 0 !important;
+        overflow: hidden !important;
+        transition: max-height .5s, opacity .4s !important;
+        opacity: 0 !important;
+        padding: 0!important;
+        margin: 0!important;
+    }
+
+    .footer-column.active ul {
+        display: block !important;
+        max-height: 500px !important;
+        opacity: 1 !important;
+        padding: 10px 0!important;
+        margin: 0!important;
+    }
+
+    .footer-image ul {
+        display: none !important;
+        max-height: 0 !important;
+        overflow: hidden !important;
+        transition: max-height .5s, opacity .4s !important;
+        opacity: 0 !important;
+        padding: 0!important;
+        margin: 0!important;
+    }
+
+    .footer-image.active ul {
+        display: block !important;
+        max-height: 500px !important;
+        opacity: 1 !important;
+        padding: 10px 0!important;
+        margin: 0!important;
+    }
+
+    .footerextra {
+
+        max-width: 100%;
+        width: 100%;
+        padding-left: 15px !important;
+        padding-right: 15px !important;
+        box-sizing: border-box;
+        margin-left: 0;
+        margin-right: 0;
+    }
 }
 
 @media (max-width:700px) {
@@ -2334,4 +2397,6 @@ input[type=number] {
 .captcha-canvas-wrap {
     display: block;
 }
-
+.footer-column h3::after{
+    display: none;
+}

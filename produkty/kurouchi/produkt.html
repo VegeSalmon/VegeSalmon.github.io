@@ -11,6 +11,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Just+Another+Hand&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
           rel="stylesheet">
+    <meta name="keywords" content="noże kuchenne, japońskie noże, noże Haiku, noże Sekiryu, noże do krojenia, noże do sushi, noże do sashimi, noże do warzyw, sklep z nożami, oferta noży">
 </head>
 <body>
 <header>
@@ -21,7 +22,7 @@
             </div>
             <div class="prawo">
                 <form action="/">
-                    <input type="search" class="searchinput" placeholder="Wpisz szukaną frazę">
+                    <input type="search" class="searchinput" placeholder="Wpisz szukaną frazę" aria-label="Wpisz szukaną frazę">
                     <button type="submit" class="ikony">
                         <svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path fill-rule="evenodd" clip-rule="evenodd"
@@ -145,7 +146,7 @@
                     <div class="product-buy-qty">
                         <div class="product-buy-qty-controls">
                             <button class="qty-btn qty-minus" type="button">-</button>
-                            <input type="number" class="qty-input" value="1" min="1">
+                            <input type="number" class="qty-input" value="1" min="1" aria-label="Ilość produktów">
                             <button class="qty-btn qty-plus" type="button">+</button>
                         </div>
                         <div class="product-buy-add-wrap">
@@ -157,7 +158,6 @@
                     </div>
                 </div>
             </div>
-            <!-- Sekcje rozwijane -->
             <div class="product-sections">
                 <div class="product-section">
                     <div class="product-section-header">
@@ -387,7 +387,6 @@
         </div>
     </div>
 </div>
-<!-- Polecane produkty -->
 
 
 <footer>
@@ -399,8 +398,8 @@
             <div class="footer-column">
                 <h3>Informacje</h3>
                 <ul>
-                    <li><a href="/regulamin/">Regulamin</a></li>
-                    <li><a href="/kontakt/">Kontakt</a></li>
+                    <li><a href="regulamin/">Regulamin</a></li>
+                    <li><a href="kontakt/">Kontakt</a></li>
                     <li><a href="#">Wysyłka</a></li>
                     <li><a href="#">Informacji</a></li>
                 </ul>
@@ -408,7 +407,7 @@
             <div class="footer-column">
                 <h3 class="footer-text">Oferta</h3>
                 <ul>
-                    <li><a href="/produkty/">Oferta</a></li>
+                    <li><a href="produkty/">Oferta</a></li>
                     <li><a href="#">Płatności</a></li>
                     <li><a href="#">Odstąpienie umowy</a></li>
                     <li><a href="#">Odbiór osobisty</a></li>
@@ -445,8 +444,6 @@
 
 <script src="../../menu.js"></script>
 <script src="produkt.js"></script>
-<script>
 
-</script>
 </body>
 </html>

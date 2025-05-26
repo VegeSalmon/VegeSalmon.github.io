@@ -10,6 +10,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Just+Another+Hand&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <meta name="keywords" content="aktualności, blog, nowości, porady kuchenne, tradycja noży, innowacje, historia noży, ciekawostki o nożach, Haiku, Sekiryu">
 </head>
 <body>
 <header>
@@ -20,7 +21,7 @@
             </div>
             <div class="prawo">
                 <form action="/">
-                    <input type="search" class="searchinput" placeholder="Wpisz szukaną frazę">
+                    <input type="search" class="searchinput" placeholder="Wpisz szukaną frazę" aria-label="Wpisz szukaną frazę" name="search">
                     <button type="submit" class="ikony">
                         <svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path fill-rule="evenodd" clip-rule="evenodd" d="M17.4272 18.4705L13.3824 14.4247L13.1734 14.5871C11.5699 15.8322 9.5523 16.4193 7.5313 16.2288C5.5103 16.0384 3.63781 15.0847 2.29504 13.5619C0.952268 12.0391 0.240166 10.0617 0.30372 8.03215C0.367274 6.00264 1.20171 4.07366 2.63712 2.6379C4.07254 1.20214 6.00102 0.367533 8.02998 0.303965C10.0589 0.240398 12.0359 0.952647 13.5583 2.29573C15.0807 3.63882 16.0342 5.51179 16.2246 7.53334C16.415 9.55489 15.8281 11.573 14.5832 13.1769L14.421 13.3859L18.4581 17.4242L18.4658 17.4314C18.5381 17.4987 18.596 17.5799 18.6362 17.6701C18.6763 17.7603 18.698 17.8577 18.6997 17.9564C18.7014 18.0551 18.6833 18.1532 18.6463 18.2448C18.6093 18.3363 18.5543 18.4195 18.4845 18.4893C18.4147 18.5591 18.3316 18.6142 18.2401 18.6511C18.1485 18.6881 18.0505 18.7063 17.9518 18.7045C17.8532 18.7028 17.7558 18.6812 17.6657 18.641C17.5755 18.6008 17.4945 18.5427 17.4272 18.4705ZM14.2935 10.773C14.6206 9.98304 14.789 9.13632 14.789 8.28123C14.789 6.55429 14.1031 4.89808 12.8823 3.67693C11.6614 2.45578 10.0056 1.76973 8.27899 1.76973C6.55241 1.76973 4.89655 2.45578 3.6757 3.67693C2.45484 4.89808 1.76899 6.55429 1.76899 8.28123C1.76899 9.13632 1.93737 9.98304 2.26452 10.773C2.59168 11.563 3.07119 12.2809 3.6757 12.8855C4.2802 13.4902 4.99786 13.9698 5.7877 14.2971C6.57753 14.6243 7.42407 14.7927 8.27899 14.7927C9.1339 14.7927 9.98045 14.6243 10.7703 14.2971C11.5601 13.9698 12.2778 13.4902 12.8823 12.8855C13.4868 12.2809 13.9663 11.563 14.2935 10.773Z" fill="var(--stroke-color)"></path>
@@ -152,7 +153,6 @@
 </main>
 
 <div class="pagination" id="aktualnosciPagination">
-    <!-- Tu będzie dynamiczna paginacja -->
 </div>
 
 <footer>
@@ -190,7 +190,10 @@
             </div>
             <div class="footer-image footer-column">
                 <h3>Dostawa i płatności</h3>
-                <img src="/zdjecia/dostawa.png" alt="Dostawa" class="footer-image-content">
+                <ul>
+                    <li><img src="/zdjecia/dostawa.png" alt="Dostawa" class="footer-image-content">
+                    </li>
+                </ul>
             </div>
         </div>
         <hr>
@@ -202,119 +205,7 @@
 
     </div>
 </footer>
-
 <script src="../menu.js"></script>
-<script>
-// Dynamiczna paginacja jak w produktach
-(function() {
-    const totalPages = 13; // liczba stron (przykład)
-    let currentPage = 1;   // aktualna strona (przykład, można dynamicznie)
-
-    function pad2(n) {
-        return n < 10 ? '0' + n : '' + n;
-    }
-
-    function getMaxVisiblePages() {
-        if (window.innerWidth < 500) return 3;
-        if (window.innerWidth < 700) return 5;
-        if (window.innerWidth < 900) return 7;
-        if (window.innerWidth < 1200) return 9;
-        return 11;
-    }
-
-    function renderPagination(container, total, current) {
-        container.innerHTML = '';
-        const maxVisible = getMaxVisiblePages();
-
-        // Lewa strzałka
-        const left = document.createElement('a');
-        left.href = '#';
-        left.className = 'arrow';
-        left.innerHTML = `<svg width="24" height="18" viewBox="0 0 24 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M0.000527213 9.01872C0.00158197 9.04493 0.00474436 9.06579 0.00658876 9.0797L0.00790865 9.08906L0.00869447 9.09708L0.0102814 9.10484C0.030835 9.2153 0.0843285 9.31639 0.163384 9.39449L8.48317 17.8387C8.58831 17.946 8.72956 18.0003 8.86765 18C9.00547 18.0003 9.14618 17.946 9.25159 17.839C9.35673 17.7317 9.41101 17.5892 9.41075 17.449C9.41101 17.3089 9.35752 17.1666 9.25211 17.0596L1.85359 9.55095L23.4593 9.55095C23.757 9.54908 23.9987 9.30489 24 9.00267C24 8.69805 23.7589 8.44958 23.4593 8.44878L1.85095 8.44878L9.25185 0.94089C9.35699 0.833642 9.41075 0.69109 9.41049 0.551213C9.41075 0.411069 9.35725 0.268519 9.25185 0.161538L9.2508 0.160468C9.14539 0.0542895 9.0052 -0.000266432 8.86738 5.84413e-07C8.7293 5.72341e-07 8.5891 0.0540224 8.4837 0.160468L8.4829 0.161273L0.154424 8.61219C0.0563954 8.71382 0.000786628 8.85049 0.000260187 8.99304L7.87226e-07 8.99518L7.87039e-07 8.99732L7.86758e-07 9.00053L7.8601e-07 9.00909L0.000527213 9.01872Z" fill="black"/>
-        </svg>`;
-        if(current > 1) {
-            left.addEventListener('click', function(e) {
-                e.preventDefault();
-                renderPagination(container, total, current-1);
-            });
-        } else {
-            left.style.opacity = '0.5';
-            left.style.pointerEvents = 'none';
-        }
-        container.appendChild(left);
-
-        // Wylicz widoczne strony
-        let pages = [];
-        if (total <= maxVisible) {
-            for (let i = 1; i <= total; i++) pages.push(i);
-        } else {
-            const side = Math.floor((maxVisible - 3) / 2);
-            let start = Math.max(2, current - side);
-            let end = Math.min(total - 1, current + side);
-
-            if (current - 1 <= side) {
-                start = 2;
-                end = maxVisible - 2;
-            } else if (total - current <= side) {
-                start = total - (maxVisible - 3);
-                end = total - 1;
-            }
-
-            pages.push(1);
-            if (start > 2) pages.push('...');
-            for (let i = start; i <= end; i++) pages.push(i);
-            if (end < total - 1) pages.push('...');
-            pages.push(total);
-        }
-
-        pages.forEach(p => {
-            if (p === '...') {
-                const span = document.createElement('span');
-                span.className = 'dots';
-                span.textContent = '...';
-                container.appendChild(span);
-            } else {
-                const a = document.createElement('a');
-                a.href = '#';
-                a.className = 'page' + (p === current ? ' current' : '');
-                a.textContent = pad2(p);
-                if (p !== current) {
-                    a.addEventListener('click', function(e) {
-                        e.preventDefault();
-                        renderPagination(container, total, p);
-                    });
-                }
-                container.appendChild(a);
-            }
-        });
-
-        // Prawa strzałka
-        const right = document.createElement('a');
-        right.href = '#';
-        right.className = 'arrow right';
-        right.innerHTML = `<svg width="24" height="18" viewBox="0 0 24 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M23.9995 8.98128C23.9984 8.95507 23.9953 8.93421 23.9934 8.9203L23.9921 8.91094L23.9913 8.90292L23.9897 8.89516C23.9692 8.7847 23.9157 8.68361 23.8366 8.60551L15.5168 0.161273C15.4117 0.0540253 15.2704 -0.000266468 15.1324 9.83317e-07C14.9945 -0.000266468 14.8538 0.0540254 14.7484 0.161006C14.6433 0.268254 14.589 0.410805 14.5893 0.55095C14.589 0.691094 14.6425 0.833379 14.7479 0.940359L22.1464 8.44905H0.540739C0.242964 8.45092 0.00131798 8.69511 0 8.99733C0 9.30195 0.241119 9.55042 0.540739 9.55122H22.1491L14.7482 17.0591C14.643 17.1664 14.5892 17.3089 14.5895 17.4488C14.5892 17.5889 14.6427 17.7315 14.7482 17.8385L14.7492 17.8395C14.8546 17.9457 14.9948 18.0003 15.1326 18C15.2707 18 15.4109 17.946 15.5163 17.8395L15.5171 17.8387L23.8456 9.38781C23.9436 9.28618 23.9992 9.14951 23.9997 9.00696L24 9.00482V9.00267V8.99946V8.99091L23.9995 8.98128Z" fill="black"/>
-        </svg>`;
-        if(current < total) {
-            right.addEventListener('click', function(e) {
-                e.preventDefault();
-                renderPagination(container, total, current+1);
-            });
-        } else {
-            right.style.opacity = '0.5';
-            right.style.pointerEvents = 'none';
-        }
-        container.appendChild(right);
-    }
-
-    const pag = document.getElementById('aktualnosciPagination');
-    function rerender() {
-        if (pag) renderPagination(pag, totalPages, currentPage);
-    }
-    window.addEventListener('resize', rerender);
-    rerender();
-})();
-</script>
+<script src="artykuly/artykuly-shared.js"></script>
 </body>
 </html>

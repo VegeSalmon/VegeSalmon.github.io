@@ -1,4 +1,3 @@
-// Obsługa przycisków +/-
 document.addEventListener('DOMContentLoaded', function () {
     const minus = document.querySelector('.qty-minus');
     const plus = document.querySelector('.qty-plus');
@@ -12,14 +11,13 @@ document.addEventListener('DOMContentLoaded', function () {
         input.value = val + 1;
     });
 
-    // Rozwijanie/zwijanie sekcji produktu
     document.querySelectorAll('.product-section').forEach(function (section) {
         section.setAttribute('aria-expanded', 'true');
         const header = section.querySelector('.product-section-header');
         header.addEventListener('click', function () {
             const expanded = section.getAttribute('aria-expanded') === 'true';
             section.setAttribute('aria-expanded', expanded ? 'false' : 'true');
-            // Obrót strzałki SVG obsługuje CSS, tylko dodaj transition
+
             const arrowImg = header.querySelector('.product-section-arrow img');
             if (arrowImg) {
                 arrowImg.style.transition = 'transform 0.3s';
@@ -27,7 +25,6 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     });
 
-    // Obsługa galerii produktu
     const images = [
         "../../zdjecia/noz1.png",
         "../../zdjecia/noze2.png",
@@ -60,10 +57,8 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     });
 
-    // Inicjalizacja
     updateMainImage(0);
 
-    // Karuzela polecanych produktów
     const recommendedProducts = [
         {
             img: "../../zdjecia/noz1.png",
@@ -103,21 +98,21 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     ];
     let recIndex = 0;
-    let recVisible = 4; // domyślna liczba, nadpisywana przez JS
+    let recVisible = 4;
     const recContainer = document.querySelector('.recommended-products');
     const recLeft = document.querySelector('.recommended-arrow.left');
     const recRight = document.querySelector('.recommended-arrow.right');
 
     function getVisibleCount() {
-        // Szerokość jednej karty + gap
+
         const cardMinWidth = 220;
         const cardMaxWidth = 300;
         const cardDefaultWidth = 260;
         const gap = 20;
-        // Szerokość kontenera (uwzględnia padding)
-        const container = recContainer.parentElement; // recommended-carousel
-        const containerWidth = container.offsetWidth - 112; // padding 56px z każdej strony
-        // Przyjmij szerokość karty jako 260px (średnia)
+
+        const container = recContainer.parentElement;
+        const containerWidth = container.offsetWidth - 112;
+
         let count = Math.floor((containerWidth + gap) / (cardDefaultWidth + gap));
         if (count < 1) count = 1;
         return count;
@@ -125,7 +120,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     function renderRecommended(withAnim = false) {
         recVisible = getVisibleCount();
-        // Zapobiegaj wyświetlaniu więcej kart niż produktów
+
         if (recVisible > recommendedProducts.length) recVisible = recommendedProducts.length;
 
         if (withAnim) {
@@ -195,7 +190,7 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 
     window.addEventListener('resize', function () {
-        // Przy zmianie rozmiaru okna, przelicz liczbę widocznych kart i odśwież karuzelę
+
         renderRecommended();
     });
 
