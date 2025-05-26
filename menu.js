@@ -5,7 +5,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const scrollLinks = document.querySelectorAll('a[href^="#"]');
     const navLinks = document.querySelectorAll('nav a');
 
-    const isRegulaminPage = window.location.pathname.startsWith('/regulamin');
 
     if (hamburger && menu) {
         hamburger.addEventListener('click', () => {
@@ -32,6 +31,16 @@ document.addEventListener('DOMContentLoaded', () => {
         } else {
             link.style.fontWeight = '';
             link.style.color = '';
+        }
+    });
+
+    navLinks.forEach(link => {
+        const linkUrl = new URL(link.href, window.location.origin);
+        const currentUrl = window.location.origin + window.location.pathname;
+        if (linkUrl.pathname === window.location.pathname) {
+            link.classList.add('active');
+        } else {
+            link.classList.remove('active');
         }
     });
 

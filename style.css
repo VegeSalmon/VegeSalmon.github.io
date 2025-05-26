@@ -136,6 +136,13 @@ header .logo img:hover {
     max-width: 1480px
 }
 
+/* Lekkie li w regulaminie */
+.container-regulamin li,
+.container-regulamin .letter-list li,
+.container-regulamin .letter-list-marker {
+    font-weight: 300;
+}
+
 .containerzdj {
     background-color: #000
 }
@@ -683,7 +690,6 @@ a {
 
 .main-container .breadcrumb a.current {
     color: #000 !important;
-    font-weight: 400
 }
 
 .main-container .breadcrumb a:hover {
@@ -758,6 +764,22 @@ a {
 
 .letter-list dd {
     display: inline
+}
+
+.letter-list {
+    list-style: none;
+    padding-left: 0;
+    margin-left: 0;
+}
+
+.letter-list li {
+    position: relative;
+    padding-left: 0;
+}
+
+.letter-list-marker {
+    font-weight: 400;
+    margin-right: 5px;
 }
 
 .historia {
@@ -2302,4 +2324,36 @@ input[type=number] {
 
 .footer-column h3::after {
     display: none;
+}
+
+.product-main-image {
+    position: relative;
+}
+
+.product-image-arrows {
+    position: absolute;
+    right: 12px;
+    bottom: 12px;
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+    z-index: 3;
+}
+
+.product-image-arrow.left,
+.product-image-arrow.right {
+    position: static;
+    margin: 0;
+}
+
+input,
+textarea,
+select,
+button {
+    font-family: inherit;
+}
+
+.produkty-aside h3,
+.produkty-aside-mobile h3 {
+    letter-spacing: 0.2em;
 }
