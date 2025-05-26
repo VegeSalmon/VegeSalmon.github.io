@@ -26,8 +26,8 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 
     const images = [
-        "../../zdjecia/noz1.png",
-        "../../zdjecia/noze2.png",
+        "../../zdjecia/produkt1.png",
+        "../../zdjecia/produkt2.png",
         "../../zdjecia/produkt3.png"
     ];
     let currentIndex = 0;
