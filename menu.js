@@ -188,4 +188,42 @@ document.addEventListener('DOMContentLoaded', () => {
         window.addEventListener('resize', renderPagination);
         renderPagination();
     }
+
+    // --- Produkt hover na klik na mobilkach ---
+    function isMobile() {
+        return window.matchMedia('(hover: none) and (pointer: coarse)').matches || window.innerWidth <= 900;
+    }
+
+    function setupProduktMobileClick() {
+        const produkty = document.querySelectorAll('.produkt');
+        if (!produkty.length) return;
+
+        produkty.forEach(produkt => {
+            produkt.addEventListener('click', function (e) {
+                if (!isMobile()) return;
+                // Jeśli kliknięto link w środku, nie przechwytuj
+                if (e.target.closest('a')) return;
+                // Zamknij inne
+                produkty.forEach(p => { if (p !== produkt) p.classList.remove('active'); });
+                // Przełącz aktywność
+                produkt.classList.toggle('active');
+                e.stopPropagation();
+            });
+        });
+
+        // Zamknij po kliknięciu poza kartą
+        document.addEventListener('click', function (e) {
+            if (!isMobile()) return;
+            if (!e.target.closest('.produkt')) {
+                produkty.forEach(p => p.classList.remove('active'));
+            }
+        });
+        // Po zmianie rozmiaru wyczyść aktywne
+        window.addEventListener('resize', function () {
+            if (!isMobile()) {
+                document.querySelectorAll('.produkt.active').forEach(p => p.classList.remove('active'));
+            }
+        });
+    }
+    setupProduktMobileClick();
 });

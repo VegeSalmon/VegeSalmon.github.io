@@ -316,9 +316,16 @@ input::placeholder {
     padding: 10px
 }
 
-.produkt:hover .produkt-hover {
+.produkt:hover .produkt-hover,
+.produkt.active .produkt-hover {
     transform: translateY(0);
-    opacity: 1
+    opacity: 1;
+}
+
+.produkt:hover .produkt-info,
+.produkt.active .produkt-info {
+    opacity: 0;
+    transition: opacity .4s ease;
 }
 
 .produkt:hover .produkt-info {

@@ -764,3 +764,30 @@
         padding-right: 5px!important
     }
 }
+
+@media (hover: none) and (pointer: coarse), (max-width: 900px) {
+    .produkt .produkt-hover {
+        transition: transform .6s ease, opacity .6s ease;
+        transform: translateY(100%);
+        opacity: 0;
+    }
+    .produkt.active .produkt-hover {
+        transform: translateY(0);
+        opacity: 1;
+    }
+    .produkt .produkt-info {
+        opacity: 1;
+        transition: opacity .4s ease;
+    }
+    .produkt.active .produkt-info {
+        opacity: 0;
+    }
+    .produkt:hover .produkt-hover {
+        /* wyłącz hover na mobilkach */
+        transform: translateY(100%);
+        opacity: 0;
+    }
+    .produkt:hover .produkt-info {
+        opacity: 1;
+    }
+}
