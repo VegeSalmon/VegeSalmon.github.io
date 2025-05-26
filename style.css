@@ -14,7 +14,7 @@
 body {
     font-family: "Poppins", sans-serif;
     color: #f5f5f5;
-    background: url(./zdjecia/tlo.png) center/cover fixed
+    background: url(/zdjecia/tlo.png) center/cover fixed
 }
 
 header {
