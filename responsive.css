@@ -1,4 +1,9 @@
 @media (max-width:1200px) {
+    .recommended-hr {
+        width: 100%;
+        max-width: 100%
+    }
+
     .produkty-content {
         grid-template-columns: repeat(auto-fit,minmax(260px,1fr))!important;
         padding-left: 16px!important;
@@ -61,7 +66,9 @@
     }
 
     .kontakt-image-absolute {
-        display: none!important
+        display: none!important;
+        right: 0;
+        width: 140px
     }
 
     .kontakt-wrapper-form {
@@ -99,6 +106,11 @@
     .centered-title.small {
         margin-top: 20px!important;
         margin-bottom: 20px!important
+    }
+
+    .full-width-image,.sort-container {
+        padding-left: 16px!important;
+        padding-right: 16px!important
     }
 }
 
@@ -245,11 +257,8 @@
     }
 
     .poczatek {
-        width: 100vw!important;
-        min-width: 0!important;
         height: calc(100vw + 72px)!important;
         min-height: 0!important;
-        max-width: 100vw!important;
         max-height: none!important;
         box-sizing: border-box!important;
         position: relative!important;
@@ -287,8 +296,8 @@
     .aktualnosci-content .aktualnosci-text,.aktualnosci-content .img-wrapper {
         width: 100%!important;
         max-width: 100%!important;
-        padding-left: 7.5px!important;
-        padding-right: 7.5px!important;
+        padding-left: 7px!important;
+        padding-right: 7px!important;
         box-sizing: border-box!important
     }
 
@@ -369,6 +378,19 @@
         padding: 0!important;
         margin: 0!important
     }
+
+    .footerextra {
+        max-width: 100%;
+        width: 100%;
+        box-sizing: border-box;
+        margin-left: 0;
+        margin-right: 0
+    }
+
+    .footerextra,.full-width-image,.sort-container {
+        padding-left: 15px!important;
+        padding-right: 15px!important
+    }
 }
 
 @media (max-width:700px) {
@@ -435,13 +457,16 @@
         padding-top: 72px!important
     }
 
+    .containerzdj img,.poczatek {
+        min-height: 0!important;
+        max-height: none!important
+    }
+
     .poczatek {
         width: 100vw!important;
         min-width: 0!important;
         height: calc(100vw + 72px)!important;
-        min-height: 0!important;
         max-width: 100vw!important;
-        max-height: none!important;
         box-sizing: border-box!important;
         position: relative!important;
         display: flex!important;
@@ -450,20 +475,12 @@
         margin: 0!important
     }
 
-    .containerzdj,.containerzdj img {
-        height: 100%!important;
-        width: 100%!important;
-        box-sizing: border-box!important
-    }
-
     .containerzdj {
         flex: 1 1 auto!important;
         display: flex!important
     }
 
     .containerzdj img {
-        min-height: 0!important;
-        max-height: none!important;
         object-fit: cover!important;
         aspect-ratio: unset!important;
         display: block!important
@@ -645,15 +662,13 @@
         box-sizing: border-box!important;
         background: #fff;
         border: 1px solid #ccc;
-        border-radius: 10px;
         padding: 0;
         margin: 0;
         height: 46px;
         display: flex;
         align-items: center;
         justify-content: center;
-        border-top-right-radius: 0;
-        border-bottom-right-radius: 0
+        border-radius: 10px 0 0 10px
     }
 
     #captcha-canvas {
@@ -676,17 +691,76 @@
         width: 100%;
         display: block
     }
+
+    .full-width-image,.sort-container {
+        padding-left: 10px!important;
+        padding-right: 10px!important
+    }
 }
 
 @media (max-width:500px) {
     .produkty-content {
         grid-template-columns: 1fr!important;
-        gap: 8px!important;
-        padding-left: 5px!important;
-        padding-right: 5px!important
+        gap: 8px!important
     }
 
     #menu a {
         text-align: center!important
+    }
+
+    .full-width-image,.produkty-content,.sort-container {
+        padding-left: 5px!important;
+        padding-right: 5px!important
+    }
+}
+
+@media (max-width:900px) {
+    .kontakt-image-absolute {
+        display: none
+    }
+
+    .footerextra,.full-width-image,.sort-container {
+        padding-left: 15px!important;
+        padding-right: 15px!important
+    }
+
+    .footer-column ul,.footer-image ul {
+        display: none!important;
+        max-height: 0!important;
+        overflow: hidden!important;
+        transition: max-height .5s,opacity .4s!important;
+        opacity: 0!important;
+        padding: 0!important;
+        margin: 0!important
+    }
+
+    .footer-column.active ul,.footer-image.active ul {
+        display: block!important;
+        max-height: 500px!important;
+        opacity: 1!important;
+        padding: 10px 0!important;
+        margin: 0!important
+    }
+
+    .footerextra {
+        max-width: 100%;
+        width: 100%;
+        box-sizing: border-box;
+        margin-left: 0;
+        margin-right: 0
+    }
+}
+
+@media (max-width:700px) {
+    .full-width-image,.sort-container {
+        padding-left: 10px!important;
+        padding-right: 10px!important
+    }
+}
+
+@media (max-width:500px) {
+    .full-width-image,.sort-container {
+        padding-left: 5px!important;
+        padding-right: 5px!important
     }
 }
