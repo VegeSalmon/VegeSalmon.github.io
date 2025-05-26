@@ -200,4 +200,10 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 
     renderRecommended();
+
+});
+document.addEventListener('DOMContentLoaded', function() {
+    document.querySelectorAll('.product-section').forEach(function(section) {
+        section.setAttribute('aria-expanded', 'false');
+    });
 });

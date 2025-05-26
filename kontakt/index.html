@@ -9,7 +9,7 @@
     <title>Sekiryu</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Just+Another+Hand&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Just+Another+Hand&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 </head>
 <body>
 <header>
@@ -126,7 +126,9 @@
                 <!-- CAPTCHA ROW -->
                 <div class="kontakt-row captcha-row">
                     <div class="captcha-col">
-                        <canvas id="captcha-canvas" width="160" height="46"></canvas>
+                        <div class="captcha-canvas-wrap">
+                            <canvas id="captcha-canvas"></canvas>
+                        </div>
                         <button type="button" id="refresh-captcha" class="captcha-refresh-square" aria-label="Zmień kod">
                             <img src="../zdjecia/refresh.svg" alt="Odśwież captcha" />
                         </button>
@@ -196,7 +198,10 @@
             </div>
             <div class="footer-image footer-column">
                 <h3>Dostawa i płatności</h3>
-                <img src="/zdjecia/dostawa.png" alt="Dostawa" class="footer-image-content">
+                <ul>
+                    <li><img src="/zdjecia/dostawa.png" alt="Dostawa" class="footer-image-content">
+                    </li>
+                </ul>
             </div>
         </div>
         <hr>
@@ -223,11 +228,14 @@
 
     function drawCaptcha(text) {
         const canvas = document.getElementById('captcha-canvas');
+        // Ustaw atrybuty width/height przed rysowaniem, by nie rozciągać zawartości
+        canvas.width = 160;
+        canvas.height = 46;
         const ctx = canvas.getContext('2d');
         ctx.clearRect(0, 0, canvas.width, canvas.height);
 
         // Tło
-        ctx.fillStyle = '#f5f5f5';
+        ctx.fillStyle = '#fff'; // było #f5f5f5
         ctx.fillRect(0, 0, canvas.width, canvas.height);
 
         // Szum
