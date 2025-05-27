@@ -2364,3 +2364,9 @@ button {
 .produkty-aside-mobile h3 {
     letter-spacing: 0.2em;
 }
+
+.centered-title {
+    font-weight: 300 !important;
+    font-size: 35px !important;
+    /* Możesz dodać inne style jeśli potrzeba */
+}
