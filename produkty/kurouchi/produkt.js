@@ -142,7 +142,7 @@ document.addEventListener('DOMContentLoaded', function () {
                                     </div>
                                     <div class="promo-price">${prod.promo}</div>
                                 </div>
-                                <button class="zobacz-wiecej-szary" type="button">Zobacz więcej</button>
+                                <span class="zobacz-wiecej-szary">Zobacz więcej</span>
                             </a>
                         `;
                     recContainer.appendChild(card);
@@ -170,7 +170,7 @@ document.addEventListener('DOMContentLoaded', function () {
                                 </div>
                                 <div class="promo-price">${prod.promo}</div>
                             </div>
-                            <button class="zobacz-wiecej-szary" type="button">Zobacz więcej</button>
+                            <span class="zobacz-wiecej-szary">Zobacz więcej</span>
                         </a>
                     `;
                 recContainer.appendChild(card);
