@@ -2392,3 +2392,8 @@ button {
     color: #e31019;
     transition: color 0.3s;
 }
+section:nth-of-type(2) > ol > li:nth-child(3),
+section:nth-of-type(2) > ol > li:nth-child(4),
+section:nth-of-type(2) > ol > li:nth-child(5) {
+    margin-bottom: 2em;
+}

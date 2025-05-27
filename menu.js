@@ -22,27 +22,28 @@ document.addEventListener('DOMContentLoaded', () => {
 
     }
 
-    const currentPage = window.location.pathname;
-    navLinks.forEach(link => {
-        const href = link.getAttribute('href');
-        if (currentPage.includes(href)) {
-            link.style.fontWeight = 'bold';
-            link.style.color = 'red';
-        } else {
-            link.style.fontWeight = '';
-            link.style.color = '';
-        }
-    });
+    const currentPath = window.location.pathname === '/' ? '/' : window.location.pathname.replace(/\/$/, '');
 
     navLinks.forEach(link => {
         const linkUrl = new URL(link.href, window.location.origin);
-        const currentUrl = window.location.origin + window.location.pathname;
-        if (linkUrl.pathname === window.location.pathname) {
+        const linkPath = linkUrl.pathname === '/' ? '/' : linkUrl.pathname.replace(/\/$/, '');
+
+        console.log('Sprawdzam link:', link.href);
+        console.log('Link path:', linkPath, 'vs', 'Current path:', currentPath);
+
+        if (
+            link.closest('#menu') &&
+            linkPath === currentPath
+        ) {
+            console.log('MATCH - dodaję .active:', link.href);
             link.classList.add('active');
         } else {
+            console.log('NO MATCH:', link.href);
             link.classList.remove('active');
         }
+
     });
+
 
     if (scrollLinks.length > 0 && header) {
         const headerHeight = header.offsetHeight;
