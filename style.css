@@ -689,10 +689,10 @@ a {
 }
 
 .main-container .breadcrumb a {
-    color: #6d6e71 !important;
+    color: #858585 !important;
     text-decoration: none;
     transition: text-decoration .4s ease;
-    font-weight: 400
+    font-weight: 400;
 }
 
 .main-container .breadcrumb a.current {
@@ -1175,7 +1175,8 @@ a {
     text-decoration: none;
     color: #000;
     border: 1px solid transparent;
-    transition: all .3s ease
+    transition: all .3s ease;
+    letter-spacing: .2em;
 }
 
 .kategorie-list li a {
@@ -2369,4 +2370,26 @@ button {
     font-weight: 300 !important;
     font-size: 35px !important;
     /* Możesz dodać inne style jeśli potrzeba */
+}
+
+.kategorie-list .chinskie-znaczki {
+    display: inline;
+    margin-left: 8px;
+    margin-bottom: 0;
+    color: #000; /* czarne znaki */
+    font-size: 13px;
+    transition: color 0.3s;
+    vertical-align: middle;
+}
+
+.kategorie-list li a:hover,
+.kategorie-list li label:hover {
+    color: #e31019;
+    /* ...existing code... */
+}
+
+.kategorie-list li a:hover .chinskie-znaczki,
+.kategorie-list li label:hover .chinskie-znaczki {
+    color: #e31019;
+    transition: color 0.3s;
 }

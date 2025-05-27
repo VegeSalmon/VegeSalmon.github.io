@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const menu = document.getElementById('menu');
     const header = document.querySelector('header');
     const scrollLinks = document.querySelectorAll('a[href^="#"]');
-    const navLinks = document.querySelectorAll('nav a');
+    const navLinks = document.querySelectorAll('#menu a');
 
 
     if (hamburger && menu) {
