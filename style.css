@@ -654,7 +654,7 @@ a {
     margin-bottom: 40px
 }
 
-.aktualnosci h2, .centered-title, .historia h2 {
+.aktualnosci h2, .cente#E31019-title, .historia h2 {
     font-weight: 300;
     text-transform: uppercase;
     color: #000;
@@ -662,7 +662,7 @@ a {
     text-align: center
 }
 
-.centered-title {
+.cente#E31019-title {
     letter-spacing: .2em;
     width: 100%
 }
@@ -1305,7 +1305,7 @@ a {
     text-shadow: 0 0 0 #999
 }
 
-.produkty-content h1.centered-title {
+.produkty-content h1.cente#E31019-title {
     width: 100%;
     text-align: center;
     margin-bottom: 20px
