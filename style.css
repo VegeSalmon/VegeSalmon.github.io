@@ -2369,7 +2369,7 @@ button {
 .centered-title {
     font-weight: 300 !important;
     font-size: 35px !important;
-    /* Możesz dodać inne style jeśli potrzeba */
+    text-align: center !important;
 }
 
 .kategorie-list .chinskie-znaczki {
@@ -2385,7 +2385,6 @@ button {
 .kategorie-list li a:hover,
 .kategorie-list li label:hover {
     color: #e31019;
-    /* ...existing code... */
 }
 
 .kategorie-list li a:hover .chinskie-znaczki,
