@@ -732,8 +732,6 @@ a {
 }
 
 .arrow path {
-    fill: var(--stroke-color);
-    stroke: var(--stroke-color);
     transition: fill .4s ease, stroke .4s ease
 }
 
