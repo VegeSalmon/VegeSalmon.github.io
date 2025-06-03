@@ -28,17 +28,13 @@ document.addEventListener('DOMContentLoaded', () => {
         const linkUrl = new URL(link.href, window.location.origin);
         const linkPath = linkUrl.pathname === '/' ? '/' : linkUrl.pathname.replace(/\/$/, '');
 
-        console.log('Sprawdzam link:', link.href);
-        console.log('Link path:', linkPath, 'vs', 'Current path:', currentPath);
 
         if (
             link.closest('#menu') &&
             linkPath === currentPath
         ) {
-            console.log('MATCH - dodaję .active:', link.href);
             link.classList.add('active');
         } else {
-            console.log('NO MATCH:', link.href);
             link.classList.remove('active');
         }
 
